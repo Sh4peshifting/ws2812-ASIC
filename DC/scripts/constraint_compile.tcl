@@ -1,11 +1,12 @@
 #****************************************************
-#dxzhang@ustc.edu
 #Note: 	clocks and reset signals were assumed as ideal
 #****************************************************
 
 #****************************************************
 #MAX freq : 125M
-set SYS_CLK_PERIOD 9.0
+#set SYS_CLK_PERIOD 9.0
+#freq : 12MHz
+set SYS_CLK_PERIOD 83.3
 #****************************************************
 
 #****************************************************
@@ -23,9 +24,9 @@ set remove_tie_dont_use_switch [getenv remove_tie_dont_use_switch]
 
 # Define some variables for design -- {aes_ASIC}
 #****************************************************
-set TOP_MODULE		aes_ASIC
-set Rst_list		[list PAD_wb_rst_i]
-set Clk_list		[list PAD_wb_clk_i]
+set TOP_MODULE		ws2812
+set Rst_list		[list reset]
+set Clk_list		[list clk]
 
 set_svf 	${svfDir}/${TOP_MODULE}.svf
 
@@ -109,12 +110,12 @@ current_design $TOP_MODULE
 
 #should use pins? Can PAD_* be used?
 
-create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD /2]]  [get_ports PAD_wb_clk_i]
+create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD /2]]  [get_ports clk]
 #create_clock -name wb_clk -period $SYS_CLK_PERIOD -waveform [list 0 [expr $SYS_CLK_PERIOD/2]]  [get_pins U_wb_clk_i/D]
 
 set_dont_touch_network  [all_clocks]
 #wb_clk
-set_ideal_network [get_pins "U_wb_clk_i/D"]
+#set_ideal_network [get_pins "U_wb_clk_i/D"]
 
 set_dont_touch_network  [get_ports "$Rst_list"]
 set_ideal_network [get_ports "$Rst_list"]
@@ -138,7 +139,7 @@ set_drive 0 	[get_ports "$Clk_list"]
 
 
 set_driving_cell -lib_cell PLBI8S [remove_from_collection [all_inputs] \
-         [get_ports [list PAD_wb_clk_i PAD_wb_rst_i]]]
+         [get_ports [list clk reset]]]
 set_max_capacitance [expr $MAX_LOAD*12] [get_designs *]
 
 set_load [expr $MAX_LOAD*15] [all_outputs]
@@ -161,8 +162,8 @@ set_max_transition 1.0 $TOP_MODULE
 #output delay : max : setup
 #output delay : min : -hold
 
-set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list PAD_wb_clk_i PAD_wb_rst_i]]]
-set wb_out_ports [get_ports [list PAD_wb_dat_o PAD_wb_ack_o]]
+set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk reset]]]
+set wb_out_ports [get_ports [list data]]
 
 set_input_delay -max 5 -clock wb_clk $wb_in_ports
 set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
@@ -183,7 +184,7 @@ set_false_path -from [get_ports "$Rst_list"]
 #****************************************************
 # case_analysis
 #****************************************************
-set_case_analysis 0 [get_pins "U_wb_rst_i/D"]
+#set_case_analysis 0 [get_pins "U_wb_rst_i/D"]
 
 #****************************************************
 # area and power

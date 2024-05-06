@@ -1,0 +1,14 @@
+ 
+****************************************
+Report : timing_requirements
+        -attributes
+Design : ws2812
+Version: P-2019.03-SP3
+Date   : Mon May  6 23:31:37 2024
+****************************************
+
+Description                            Setup               Hold
+--------------------------------------------------------------------------------
+TIMING EXCEPTION                       FALSE               FALSE                -from reset
+
+1

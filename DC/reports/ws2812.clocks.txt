@@ -1,0 +1,24 @@
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'area_zero'. (OPT-171)
+Information: Updating graph... (UID-83)
+Warning: Design 'ws2812' contains 2 high-fanout nets. A fanout number of 60 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clocks
+Design : ws2812
+Version: P-2019.03-SP3
+Date   : Mon May  6 23:31:33 2024
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+wb_clk          83.30   {0 41.65}           d         {clk}
+--------------------------------------------------------------------------------
+1
