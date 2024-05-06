@@ -1,0 +1,155 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version P-2019.03-SP3 for linux64 - Jul 19, 2019 
+
+                    Copyright (c) 1988 - 2019 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+#****************************************************
+date
+Mon May  6 22:19:28 2024
+#****************************************************
+set exit_switch 	[getenv exit_switch]
+true
+set TOP_MODULE  ws2812
+ws2812
+set_svf ${svfDir}/${TOP_MODULE}.svf
+1
+define_design_lib WORK -path WORK
+1
+analyze -format sverilog -lib WORK  [sh ls $topDir/*.v]
+Running PRESTO HDLC
+Compiling source file ../rtl/ws2812.v
+Presto compilation completed successfully.
+Loading db file '/home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db'
+Loading db file '/home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ss.db'
+Loading db file '/opt/synopsys/syn/P-2019.03-SP3/libraries/syn/dw_foundation.sldb'
+1
+elaborate $TOP_MODULE
+Loading db file '/opt/synopsys/syn/P-2019.03-SP3/libraries/syn/gtech.db'
+Loading db file '/opt/synopsys/syn/P-2019.03-SP3/libraries/syn/standard.sldb'
+  Loading link library 'smic18_ss'
+  Loading link library 'smic18IO_line_ss'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+
+Statistics for case statements in always block at line 79 in file
+	'../rtl/ws2812.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           100            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine ws2812 line 71 in file
+		'../rtl/ws2812.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     led_reg_reg     | Flip-flop |  192  |  Y  | N  | N  | N  | N  | N  | N  |
+|    led_color_reg    | Flip-flop |  24   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine ws2812 line 79 in file
+		'../rtl/ws2812.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      data_reg       | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | Y  | N  |
+|   bit_counter_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | Y  | N  |
+|   bit_counter_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | Y  | N  | N  |
+|   rgb_counter_reg   | Flip-flop |   4   |  Y  | N  | N  | N  | N  | Y  | N  |
+|   rgb_counter_reg   | Flip-flop |   1   |  N  | N  | N  | N  | Y  | N  | N  |
+|   led_counter_reg   | Flip-flop |   3   |  Y  | N  | N  | N  | N  | Y  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|    ws2812/74     |   8    |   24    |      3       |
+======================================================
+Presto compilation completed successfully. (ws2812)
+Elaborated 1 design.
+Current design is now 'ws2812'.
+1
+current_design $TOP_MODULE	
+Current design is 'ws2812'.
+{ws2812}
+link
+
+  Linking design 'ws2812'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  ws2812                      /home/class/U65/SDUST_ASIC_proj/DC/ws2812.db
+  smic18_ss (library)         /home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db
+  smic18IO_line_ss (library)  /home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ss.db
+  dw_foundation.sldb (library) /opt/synopsys/syn/P-2019.03-SP3/libraries/syn/dw_foundation.sldb
+
+1
+if { [link] == 0 } {
+	echo "Linking Error when deal with $TOP_MODULE"
+	exit;
+}
+
+  Linking design 'ws2812'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  ws2812                      /home/class/U65/SDUST_ASIC_proj/DC/ws2812.db
+  smic18_ss (library)         /home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db
+  smic18IO_line_ss (library)  /home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ss.db
+  dw_foundation.sldb (library) /opt/synopsys/syn/P-2019.03-SP3/libraries/syn/dw_foundation.sldb
+
+uniquify
+1
+if { [check_design] == 0 } {
+	echo "Check Design Error when deal with $TOP_MODULE"
+	exit;
+}
+ 
+****************************************
+check_design summary:
+Version:     P-2019.03-SP3
+Date:        Mon May  6 22:19:29 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+No issues found.
+--------------------------------------------------------------------------------
+
+write -format ddc -hierarchy -output ${netlistDir}/${TOP_MODULE}_unmapped.ddc
+Writing ddc file '/home/class/U65/SDUST_ASIC_proj/DC/netlist/ws2812_unmapped.ddc'.
+1
+date
+Mon May  6 22:19:29 2024
+#****************************************************
+#  Finish and Quit
+#****************************************************
+if {$exit_switch == "true"} {
+exit
+}
+
+Memory usage for main task 143 Mbytes.
+Memory usage for this session 143 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+Elapsed time for this session 4 seconds ( 0.00 hours ).
+
+Thank you...
