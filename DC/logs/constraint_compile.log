@@ -31,7 +31,7 @@ set SYS_CLK_PERIOD 83.3
 #****************************************************
 #****************************************************
 date
-Tue May  7 10:47:13 2024
+Tue May  7 11:43:31 2024
 #****************************************************
 set fix_hold_switch 	[getenv fix_hold_switch]
 false
@@ -190,6 +190,8 @@ set_driving_cell -lib_cell INVHD2X [remove_from_collection [all_inputs]         
 set_load [expr $MAX_LOAD*3] [all_outputs]
 1
 #set_max_fanout 10 [all_inputs]
+set_max_fanout 60 [get_ports clk]
+1
 #set_max_transition 1.0 $TOP_MODULE
 #****************************************************
 # input delay and output delay
@@ -246,7 +248,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     P-2019.03-SP3
-Date:        Tue May  7 10:47:15 2024
+Date:        Tue May  7 11:43:33 2024
 ****************************************
 
                    Name                                            Total
@@ -475,7 +477,7 @@ Warning: Design 'ws2812' contains 1 high-fanout nets. A fanout number of 60 will
 write_sdc  -nosplit ${netlistDir}/${TOP_MODULE}.sdc
 1
 date
-Tue May  7 10:47:19 2024
+Tue May  7 11:43:37 2024
 #****************************************************
 #  Finish and Quit
 #****************************************************

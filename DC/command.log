@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version P-2019.03-SP3 for linux64 -- Jul 19, 2019
-#@ # Date:   Tue May  7 10:47:13 2024
+#@ # Date:   Tue May  7 11:43:31 2024
 #@ # Run by: U65@localhost.localdomain
 #@ 
 
@@ -6904,6 +6904,8 @@ source -echo -verbose /home/class/U65/SDUST_ASIC_proj/DC/./scripts/constraint_co
 #@ 
 #@ set_load [expr $MAX_LOAD*3] [all_outputs]
 #@ #set_max_fanout 10 [all_inputs]
+#@ 
+#@ set_max_fanout 60 [get_ports clk]
 #@ 
 #@ #set_max_transition 1.0 $TOP_MODULE
 #@ 

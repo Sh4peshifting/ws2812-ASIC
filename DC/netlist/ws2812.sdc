@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Tue May 7 10:47:19 2024
+# Created by write_sdc on Tue May 7 11:43:37 2024
 
 ###################################################################
 set sdc_version 2.1
@@ -43,6 +43,7 @@ set_driving_cell -lib_cell INVHD2X [get_ports {led_num[1]}]
 set_driving_cell -lib_cell INVHD2X [get_ports {led_num[0]}]
 set_driving_cell -lib_cell INVHD2X [get_ports write]
 set_load -pin_load 0.0522168 [get_ports data]
+set_max_fanout 60 [get_ports clk]
 set_ideal_network [get_ports reset]
 create_clock [get_ports clk]  -name wb_clk  -period 83.3  -waveform {0 41.65}
 set_clock_uncertainty 0.1  [get_clocks wb_clk]

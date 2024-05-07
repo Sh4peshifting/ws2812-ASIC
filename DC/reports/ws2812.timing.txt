@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : ws2812
 Version: P-2019.03-SP3
-Date   : Tue May  7 10:47:18 2024
+Date   : Tue May  7 11:43:36 2024
 ****************************************
 
  # A fanout number of 60 was used for high fanout net computations.

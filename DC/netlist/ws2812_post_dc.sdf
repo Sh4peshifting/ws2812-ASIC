@@ -1,7 +1,7 @@
 (DELAYFILE
 (SDFVERSION "OVI 2.1")
 (DESIGN "ws2812")
-(DATE "Tue May  7 10:47:19 2024")
+(DATE "Tue May  7 11:43:37 2024")
 (VENDOR "smic18_ss")
 (PROGRAM "Synopsys Design Compiler cmos")
 (VERSION "P-2019.03-SP3")
