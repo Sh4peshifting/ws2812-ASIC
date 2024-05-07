@@ -1,0 +1,35 @@
+date
+set TOP_MODULE ws2812
+set	search_path	"$search_path  $topDir "
+
+set 	synopsys_auto_setup 	true
+set_svf ${svfDir}/${TOP_MODULE}.svf
+
+#set hdlin_interface_only "vs_*"
+
+read_db "lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_tt.db lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_tt.db"
+
+#read_verilog -r "lib/verilog/smic18IO_line.v  lib/verilog/smic18IO_stagger.v"
+read_verilog -r [sh ls $topDir/*.v]
+set_top ${TOP_MODULE}
+
+
+#read_db -i lib/user_ram/vs_dp_16x64/vs_dp_16x64_worst.db
+
+#read_ddc -i ${TOP_MODULE}.ddc
+read_verilog -i ${TOP_MODULE}.vg
+set_top ${TOP_MODULE}
+
+
+match
+if [ verify ] {
+	date
+	exit
+} else {
+  	diagnose
+        report_unmatched
+        report_failing
+        report_error_candidates
+}
+
+date

@@ -1,0 +1,8 @@
+logs/
+FM_WORK/
+
+*.lck
+*.log
+
+formality*_svf
+

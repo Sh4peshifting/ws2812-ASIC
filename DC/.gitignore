@@ -1,1 +1,9 @@
 synopsys_cache*
+
+*.svf
+command.log
+
+logs/
+netlist/
+WORK/
+

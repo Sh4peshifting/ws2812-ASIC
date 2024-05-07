@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir -p logs
+
+fm_shell -f ws2812.fms 	| tee -i logs/ws2812.log
+
