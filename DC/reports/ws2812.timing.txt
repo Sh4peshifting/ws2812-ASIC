@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : ws2812
 Version: P-2019.03-SP3
-Date   : Mon May  6 23:31:37 2024
+Date   : Tue May  7 10:47:18 2024
 ****************************************
 
  # A fanout number of 60 was used for high fanout net computations.
@@ -15,7 +15,7 @@ Operating Conditions: worst   Library: smic18_ss
 Wire Load Model Mode: segmented
 
   Startpoint: led_num[5] (input port clocked by wb_clk)
-  Endpoint: led_reg_reg[5][8]
+  Endpoint: led_reg_reg[4][0]
             (rising edge-triggered flip-flop clocked by wb_clk)
   Path Group: wb_clk
   Path Type: max
@@ -27,29 +27,28 @@ Wire Load Model Mode: segmented
   Point                                    Incr       Path
   -----------------------------------------------------------
   clock wb_clk (rise edge)                 0.00       0.00
-  clock network delay (ideal)              0.80       0.80
-  input external delay                     5.00       5.80 f
-  led_num[5] (in)                          0.00       5.80 f
-  U465/Z (NOR3HD1X)                        0.25       6.05 r
-  U464/Z (AND3HD1X)                        0.39       6.44 r
-  U460/Z (NAND2HD1X)                       0.40       6.84 f
-  U137/Z (NOR3HD1X)                        0.53       7.38 r
-  U132/Z (INVHD1X)                         0.27       7.64 f
-  U284/Z (INVHDPX)                         0.47       8.12 r
-  led_reg_reg[5][8]/E (FFEDQHDLX)          0.00       8.12 r
-  data arrival time                                   8.12
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    41.65      41.65 f
+  led_num[5] (in)                          0.02      41.67 f
+  U325/Z (NOR3HD1X)                        0.26      41.93 r
+  U324/Z (AND3HD1X)                        0.39      42.32 r
+  U320/Z (NAND2HD1X)                       0.36      42.68 f
+  U176/Z (OR3HD1X)                         0.49      43.17 f
+  U158/Z (INVHDPX)                         0.75      43.92 r
+  led_reg_reg[4][0]/E (FFEDQHDLX)          0.00      43.92 r
+  data arrival time                                  43.92
 
   clock wb_clk (rise edge)                83.30      83.30
-  clock network delay (ideal)              0.80      84.10
-  clock uncertainty                       -0.30      83.80
-  led_reg_reg[5][8]/CK (FFEDQHDLX)         0.00      83.80 r
-  library setup time                      -0.34      83.46
-  data required time                                 83.46
+  clock network delay (ideal)              0.00      83.30
+  clock uncertainty                       -0.10      83.20
+  led_reg_reg[4][0]/CK (FFEDQHDLX)         0.00      83.20 r
+  library setup time                      -0.41      82.79
+  data required time                                 82.79
   -----------------------------------------------------------
-  data required time                                 83.46
-  data arrival time                                  -8.12
+  data required time                                 82.79
+  data arrival time                                 -43.92
   -----------------------------------------------------------
-  slack (MET)                                        75.34
+  slack (MET)                                        38.87
 
 
 1

@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : ws2812
 Version: P-2019.03-SP3
-Date   : Mon May  6 23:31:37 2024
+Date   : Tue May  7 10:47:19 2024
 ****************************************
 
 
@@ -35,12 +35,12 @@ Power-specific unit information :
     Leakage Power Units = 1nW
 
 
-  Cell Internal Power  = 177.7786 uW   (97%)
-  Net Switching Power  =   5.5421 uW    (3%)
+  Cell Internal Power  = 168.8276 uW   (98%)
+  Net Switching Power  =   2.7459 uW    (2%)
                          ---------
-Total Dynamic Power    = 183.3207 uW  (100%)
+Total Dynamic Power    = 171.5736 uW  (100%)
 
-Cell Leakage Power     = 552.8879 nW
+Cell Leakage Power     = 522.7719 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -50,9 +50,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           0.1765        1.2118e-03          355.3140            0.1781  (  96.87%)
+register           0.1681        1.3013e-03          353.7714            0.1697  (  98.62%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational  1.2343e-03        4.3303e-03          197.5739        5.7622e-03  (   3.13%)
+combinational  7.5510e-04        1.4447e-03          169.0004        2.3688e-03  (   1.38%)
 --------------------------------------------------------------------------------------------------
-Total              0.1778 mW     5.5421e-03 mW       552.8879 nW         0.1839 mW
+Total              0.1688 mW     2.7459e-03 mW       522.7719 nW         0.1721 mW
 1

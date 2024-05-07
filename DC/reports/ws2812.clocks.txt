@@ -7,7 +7,7 @@ Warning: Design 'ws2812' contains 2 high-fanout nets. A fanout number of 60 will
 Report : clocks
 Design : ws2812
 Version: P-2019.03-SP3
-Date   : Mon May  6 23:31:33 2024
+Date   : Tue May  7 10:47:15 2024
 ****************************************
 
 Attributes:

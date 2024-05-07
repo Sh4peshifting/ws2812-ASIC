@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : P-2019.03-SP3
-// Date      : Mon May  6 23:31:37 2024
+// Date      : Tue May  7 10:47:19 2024
 /////////////////////////////////////////////////////////////
 
 
@@ -107,37 +107,27 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
          N267, N268, N269, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18,
          n19, n20, n21, n22, n31, n111, n112, n113, n114, n115, n116, n117,
          n118, n1190, n1200, n1210, n1220, n1230, n1240, n1250, n1260, n1270,
-         n1280, n1290, n1300, n1310, n1320, n1330, n1340, n1350, n1370, n1380,
-         n1390, n1400, n1410, n1420, n143, n144, n145, n146, n147, n1480,
-         n1490, n1500, n1510, n1520, n1530, n1540, n1550, n1560, n1570, n1580,
-         n1590, n160, n161, n162, n163, n164, n165, n166, n167, n168, n169,
-         n170, n171, n172, n173, n174, n175, n176, n177, n178, n179, n180,
-         n181, n182, n183, n184, n185, n186, n187, n188, n189, n190, n191,
-         n192, n193, n194, n195, n196, n197, n198, n199, n200, n201, n202,
-         n203, n204, n205, n206, n207, n208, n209, n210, n211, n212, n213,
-         n214, n2150, n2160, n2170, n2180, n2190, n220, n221, n222, n223, n224,
-         n225, n226, n227, n228, n229, n230, n231, n232, n233, n234, n235,
-         n236, n237, n238, n239, n240, n241, n242, n243, n244, n245, n246,
-         n247, n248, n249, n250, n251, n252, n253, n254, n255, n256, n2570,
-         n2580, n2590, n2600, n2610, n2620, n2630, n2640, n2650, n2660, n2670,
-         n2680, n2690, n270, n271, n272, n273, n274, n275, n276, n277, n278,
-         n279, n280, n281, n282, n283, n284, n285, n286, n287, n288, n289,
-         n290, n291, n292, n293, n294, n295, n296, n297, n298, n299, n300,
-         n301, n302, n303, n304, n305, n306, n307, n308, n309, n310, n311,
-         n312, n313, n314, n315, n316, n317, n318, n319, n320, n321, n322,
-         n323, n324, n325, n326, n327, n328, n329, n330, n331, n332, n333,
-         n334, n335, n336, n337, n338, n339, n340, n341, n342, n343, n344,
-         n345, n346, n347, n348, n349, n350, n351, n352, n353, n354, n355,
-         n356, n357, n358, n359, n360, n361, n362, n363, n364, n365, n366,
-         n367, n368, n369, n370, n371, n372, n373, n374, n375, n376, n377,
-         n378, n379, n380, n381, n382, n383, n384, n385, n386, n387, n388,
-         n389, n390, n391, n392, n393, n394, n395, n396, n397, n398, n399,
-         n400, n401, n402, n403, n404, n405, n406, n407, n408, n409, n410,
-         n411, n412, n413, n414, n415, n416, n417, n418, n419, n420, n421,
-         n422, n423, n424, n425, n426, n427, n428, n429, n430, n431, n432,
-         n433, n434, n435, n436, n437, n438, n439, n440, n441, n442, n443,
-         n444, n445, n446, n447, n448, n449, n450, n451, n452, n453, n454,
-         n455, n456, n457, n458;
+         n1280, n1290, n1300, n1310, n1320, n1330, n1340, n1350, n1360, n1370,
+         n1380, n1390, n1400, n1410, n1420, n143, n144, n145, n146, n147,
+         n1480, n1490, n1500, n1510, n1520, n1530, n1540, n1550, n1560, n1570,
+         n1580, n1590, n160, n161, n162, n163, n164, n165, n166, n167, n168,
+         n169, n170, n171, n172, n173, n174, n175, n176, n177, n178, n179,
+         n180, n181, n182, n183, n184, n185, n186, n187, n188, n189, n190,
+         n191, n192, n193, n194, n195, n196, n197, n198, n199, n200, n201,
+         n202, n203, n204, n205, n206, n207, n208, n209, n210, n211, n212,
+         n213, n214, n2150, n2160, n2170, n2180, n2190, n220, n221, n222, n223,
+         n224, n225, n226, n227, n228, n229, n230, n231, n232, n233, n234,
+         n235, n236, n237, n238, n239, n240, n241, n242, n243, n244, n245,
+         n246, n247, n248, n249, n250, n251, n252, n253, n254, n255, n256,
+         n2570, n2580, n2590, n2600, n2610, n2620, n2630, n2640, n2650, n2660,
+         n2670, n2680, n2690, n270, n271, n272, n273, n274, n275, n276, n277,
+         n278, n279, n280, n281, n282, n283, n284, n285, n286, n287, n288,
+         n289, n290, n291, n292, n293, n294, n295, n296, n297, n298, n299,
+         n300, n301, n302, n303, n304, n305, n306, n307, n308, n309, n310,
+         n311, n312, n313, n314, n315, n316, n317, n318, n319, n320, n321,
+         n322, n323, n324, n325, n326, n327, n328, n329, n330, n331, n332,
+         n333, n334, n335, n336, n337, n338, n339, n340, n341, n342, n343,
+         n344, n345, n346, n347, n348, n349, n350, n351;
 
   INVCLKHD4X U118 ( .A(reset), .Z(n31) );
   ws2812_DW01_dec_1 r388 ( .A({\bit_counter[11] , \bit_counter[10] , 
@@ -145,198 +135,391 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
         \bit_counter[5] , \bit_counter[4] , \bit_counter[3] , \bit_counter[2] , 
         \bit_counter[1] , \bit_counter[0] }), .SUM({N159, N158, N157, N156, 
         N155, N154, N153, N152, N151, N150, N149, N148}) );
-  FFEDQHDLX led_reg_reg_7__23_ ( .D(rgb_data[23]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_5__23_ ( .D(rgb_data[23]), .E(n2580), .CK(clk), .Q(
+        \led_reg[143] ) );
+  FFEDQHDLX led_reg_reg_5__22_ ( .D(rgb_data[22]), .E(n2570), .CK(clk), .Q(
+        \led_reg[142] ) );
+  FFEDQHDLX led_reg_reg_5__21_ ( .D(rgb_data[21]), .E(n2580), .CK(clk), .Q(
+        \led_reg[141] ) );
+  FFEDQHDLX led_reg_reg_5__20_ ( .D(rgb_data[20]), .E(n2580), .CK(clk), .Q(
+        \led_reg[140] ) );
+  FFEDQHDLX led_reg_reg_5__19_ ( .D(rgb_data[19]), .E(n2580), .CK(clk), .Q(
+        \led_reg[139] ) );
+  FFEDQHDLX led_reg_reg_5__18_ ( .D(rgb_data[18]), .E(n2580), .CK(clk), .Q(
+        \led_reg[138] ) );
+  FFEDQHDLX led_reg_reg_5__17_ ( .D(rgb_data[17]), .E(n2580), .CK(clk), .Q(
+        \led_reg[137] ) );
+  FFEDQHDLX led_reg_reg_5__16_ ( .D(rgb_data[16]), .E(n2580), .CK(clk), .Q(
+        \led_reg[136] ) );
+  FFEDQHDLX led_reg_reg_5__15_ ( .D(rgb_data[15]), .E(n2580), .CK(clk), .Q(
+        \led_reg[135] ) );
+  FFEDQHDLX led_reg_reg_5__14_ ( .D(rgb_data[14]), .E(n2580), .CK(clk), .Q(
+        \led_reg[134] ) );
+  FFEDQHDLX led_reg_reg_5__13_ ( .D(rgb_data[13]), .E(n2580), .CK(clk), .Q(
+        \led_reg[133] ) );
+  FFEDQHDLX led_reg_reg_5__12_ ( .D(rgb_data[12]), .E(n2580), .CK(clk), .Q(
+        \led_reg[132] ) );
+  FFEDQHDLX led_reg_reg_5__11_ ( .D(rgb_data[11]), .E(n2580), .CK(clk), .Q(
+        \led_reg[131] ) );
+  FFEDQHDLX led_reg_reg_5__10_ ( .D(rgb_data[10]), .E(n2570), .CK(clk), .Q(
+        \led_reg[130] ) );
+  FFEDQHDLX led_reg_reg_5__9_ ( .D(rgb_data[9]), .E(n2570), .CK(clk), .Q(
+        \led_reg[129] ) );
+  FFEDQHDLX led_reg_reg_5__8_ ( .D(rgb_data[8]), .E(n2570), .CK(clk), .Q(
+        \led_reg[128] ) );
+  FFEDQHDLX led_reg_reg_5__7_ ( .D(rgb_data[7]), .E(n2570), .CK(clk), .Q(
+        \led_reg[127] ) );
+  FFEDQHDLX led_reg_reg_5__6_ ( .D(rgb_data[6]), .E(n2570), .CK(clk), .Q(
+        \led_reg[126] ) );
+  FFEDQHDLX led_reg_reg_5__5_ ( .D(rgb_data[5]), .E(n2570), .CK(clk), .Q(
+        \led_reg[125] ) );
+  FFEDQHDLX led_reg_reg_5__4_ ( .D(rgb_data[4]), .E(n2570), .CK(clk), .Q(
+        \led_reg[124] ) );
+  FFEDQHDLX led_reg_reg_5__3_ ( .D(rgb_data[3]), .E(n2570), .CK(clk), .Q(
+        \led_reg[123] ) );
+  FFEDQHDLX led_reg_reg_5__2_ ( .D(rgb_data[2]), .E(n2570), .CK(clk), .Q(
+        \led_reg[122] ) );
+  FFEDQHDLX led_reg_reg_5__1_ ( .D(rgb_data[1]), .E(n2570), .CK(clk), .Q(
+        \led_reg[121] ) );
+  FFEDQHDLX led_reg_reg_5__0_ ( .D(rgb_data[0]), .E(n2570), .CK(clk), .Q(
+        \led_reg[120] ) );
+  FFEDQHDLX led_reg_reg_4__23_ ( .D(rgb_data[23]), .E(n2600), .CK(clk), .Q(
+        \led_reg[119] ) );
+  FFEDQHDLX led_reg_reg_4__22_ ( .D(rgb_data[22]), .E(n2590), .CK(clk), .Q(
+        \led_reg[118] ) );
+  FFEDQHDLX led_reg_reg_4__21_ ( .D(rgb_data[21]), .E(n2600), .CK(clk), .Q(
+        \led_reg[117] ) );
+  FFEDQHDLX led_reg_reg_4__20_ ( .D(rgb_data[20]), .E(n2600), .CK(clk), .Q(
+        \led_reg[116] ) );
+  FFEDQHDLX led_reg_reg_4__19_ ( .D(rgb_data[19]), .E(n2600), .CK(clk), .Q(
+        \led_reg[115] ) );
+  FFEDQHDLX led_reg_reg_4__18_ ( .D(rgb_data[18]), .E(n2600), .CK(clk), .Q(
+        \led_reg[114] ) );
+  FFEDQHDLX led_reg_reg_4__17_ ( .D(rgb_data[17]), .E(n2600), .CK(clk), .Q(
+        \led_reg[113] ) );
+  FFEDQHDLX led_reg_reg_4__16_ ( .D(rgb_data[16]), .E(n2600), .CK(clk), .Q(
+        \led_reg[112] ) );
+  FFEDQHDLX led_reg_reg_4__15_ ( .D(rgb_data[15]), .E(n2600), .CK(clk), .Q(
+        \led_reg[111] ) );
+  FFEDQHDLX led_reg_reg_4__14_ ( .D(rgb_data[14]), .E(n2600), .CK(clk), .Q(
+        \led_reg[110] ) );
+  FFEDQHDLX led_reg_reg_4__13_ ( .D(rgb_data[13]), .E(n2600), .CK(clk), .Q(
+        \led_reg[109] ) );
+  FFEDQHDLX led_reg_reg_4__12_ ( .D(rgb_data[12]), .E(n2600), .CK(clk), .Q(
+        \led_reg[108] ) );
+  FFEDQHDLX led_reg_reg_4__11_ ( .D(rgb_data[11]), .E(n2600), .CK(clk), .Q(
+        \led_reg[107] ) );
+  FFEDQHDLX led_reg_reg_4__10_ ( .D(rgb_data[10]), .E(n2590), .CK(clk), .Q(
+        \led_reg[106] ) );
+  FFEDQHDLX led_reg_reg_4__9_ ( .D(rgb_data[9]), .E(n2590), .CK(clk), .Q(
+        \led_reg[105] ) );
+  FFEDQHDLX led_reg_reg_4__8_ ( .D(rgb_data[8]), .E(n2590), .CK(clk), .Q(
+        \led_reg[104] ) );
+  FFEDQHDLX led_reg_reg_4__7_ ( .D(rgb_data[7]), .E(n2590), .CK(clk), .Q(
+        \led_reg[103] ) );
+  FFEDQHDLX led_reg_reg_4__6_ ( .D(rgb_data[6]), .E(n2590), .CK(clk), .Q(
+        \led_reg[102] ) );
+  FFEDQHDLX led_reg_reg_4__5_ ( .D(rgb_data[5]), .E(n2590), .CK(clk), .Q(
+        \led_reg[101] ) );
+  FFEDQHDLX led_reg_reg_4__4_ ( .D(rgb_data[4]), .E(n2590), .CK(clk), .Q(
+        \led_reg[100] ) );
+  FFEDQHDLX led_reg_reg_4__3_ ( .D(rgb_data[3]), .E(n2590), .CK(clk), .Q(
+        \led_reg[99] ) );
+  FFEDQHDLX led_reg_reg_4__2_ ( .D(rgb_data[2]), .E(n2590), .CK(clk), .Q(
+        \led_reg[98] ) );
+  FFEDQHDLX led_reg_reg_4__1_ ( .D(rgb_data[1]), .E(n2590), .CK(clk), .Q(
+        \led_reg[97] ) );
+  FFEDQHDLX led_reg_reg_4__0_ ( .D(rgb_data[0]), .E(n2590), .CK(clk), .Q(
+        \led_reg[96] ) );
+  FFEDQHDLX led_reg_reg_1__23_ ( .D(rgb_data[23]), .E(n270), .CK(clk), .Q(
+        \led_reg[47] ) );
+  FFEDQHDLX led_reg_reg_1__22_ ( .D(rgb_data[22]), .E(n2690), .CK(clk), .Q(
+        \led_reg[46] ) );
+  FFEDQHDLX led_reg_reg_1__21_ ( .D(rgb_data[21]), .E(n270), .CK(clk), .Q(
+        \led_reg[45] ) );
+  FFEDQHDLX led_reg_reg_1__20_ ( .D(rgb_data[20]), .E(n270), .CK(clk), .Q(
+        \led_reg[44] ) );
+  FFEDQHDLX led_reg_reg_1__19_ ( .D(rgb_data[19]), .E(n270), .CK(clk), .Q(
+        \led_reg[43] ) );
+  FFEDQHDLX led_reg_reg_1__18_ ( .D(rgb_data[18]), .E(n270), .CK(clk), .Q(
+        \led_reg[42] ) );
+  FFEDQHDLX led_reg_reg_1__17_ ( .D(rgb_data[17]), .E(n270), .CK(clk), .Q(
+        \led_reg[41] ) );
+  FFEDQHDLX led_reg_reg_1__16_ ( .D(rgb_data[16]), .E(n270), .CK(clk), .Q(
+        \led_reg[40] ) );
+  FFEDQHDLX led_reg_reg_1__15_ ( .D(rgb_data[15]), .E(n270), .CK(clk), .Q(
+        \led_reg[39] ) );
+  FFEDQHDLX led_reg_reg_1__14_ ( .D(rgb_data[14]), .E(n270), .CK(clk), .Q(
+        \led_reg[38] ) );
+  FFEDQHDLX led_reg_reg_1__13_ ( .D(rgb_data[13]), .E(n270), .CK(clk), .Q(
+        \led_reg[37] ) );
+  FFEDQHDLX led_reg_reg_1__12_ ( .D(rgb_data[12]), .E(n270), .CK(clk), .Q(
+        \led_reg[36] ) );
+  FFEDQHDLX led_reg_reg_1__11_ ( .D(rgb_data[11]), .E(n270), .CK(clk), .Q(
+        \led_reg[35] ) );
+  FFEDQHDLX led_reg_reg_1__10_ ( .D(rgb_data[10]), .E(n2690), .CK(clk), .Q(
+        \led_reg[34] ) );
+  FFEDQHDLX led_reg_reg_1__9_ ( .D(rgb_data[9]), .E(n2690), .CK(clk), .Q(
+        \led_reg[33] ) );
+  FFEDQHDLX led_reg_reg_1__8_ ( .D(rgb_data[8]), .E(n2690), .CK(clk), .Q(
+        \led_reg[32] ) );
+  FFEDQHDLX led_reg_reg_1__7_ ( .D(rgb_data[7]), .E(n2690), .CK(clk), .Q(
+        \led_reg[31] ) );
+  FFEDQHDLX led_reg_reg_1__6_ ( .D(rgb_data[6]), .E(n2690), .CK(clk), .Q(
+        \led_reg[30] ) );
+  FFEDQHDLX led_reg_reg_1__5_ ( .D(rgb_data[5]), .E(n2690), .CK(clk), .Q(
+        \led_reg[29] ) );
+  FFEDQHDLX led_reg_reg_1__4_ ( .D(rgb_data[4]), .E(n2690), .CK(clk), .Q(
+        \led_reg[28] ) );
+  FFEDQHDLX led_reg_reg_1__3_ ( .D(rgb_data[3]), .E(n2690), .CK(clk), .Q(
+        \led_reg[27] ) );
+  FFEDQHDLX led_reg_reg_1__2_ ( .D(rgb_data[2]), .E(n2690), .CK(clk), .Q(
+        \led_reg[26] ) );
+  FFEDQHDLX led_reg_reg_1__1_ ( .D(rgb_data[1]), .E(n2690), .CK(clk), .Q(
+        \led_reg[25] ) );
+  FFEDQHDLX led_reg_reg_1__0_ ( .D(rgb_data[0]), .E(n2690), .CK(clk), .Q(
+        \led_reg[24] ) );
+  FFEDQHDLX led_reg_reg_0__23_ ( .D(rgb_data[23]), .E(n272), .CK(clk), .Q(
+        \led_reg[23] ) );
+  FFEDQHDLX led_reg_reg_0__22_ ( .D(rgb_data[22]), .E(n271), .CK(clk), .Q(
+        \led_reg[22] ) );
+  FFEDQHDLX led_reg_reg_0__21_ ( .D(rgb_data[21]), .E(n272), .CK(clk), .Q(
+        \led_reg[21] ) );
+  FFEDQHDLX led_reg_reg_0__20_ ( .D(rgb_data[20]), .E(n272), .CK(clk), .Q(
+        \led_reg[20] ) );
+  FFEDQHDLX led_reg_reg_0__19_ ( .D(rgb_data[19]), .E(n272), .CK(clk), .Q(
+        \led_reg[19] ) );
+  FFEDQHDLX led_reg_reg_0__18_ ( .D(rgb_data[18]), .E(n272), .CK(clk), .Q(
+        \led_reg[18] ) );
+  FFEDQHDLX led_reg_reg_0__17_ ( .D(rgb_data[17]), .E(n272), .CK(clk), .Q(
+        \led_reg[17] ) );
+  FFEDQHDLX led_reg_reg_0__16_ ( .D(rgb_data[16]), .E(n272), .CK(clk), .Q(
+        \led_reg[16] ) );
+  FFEDQHDLX led_reg_reg_0__15_ ( .D(rgb_data[15]), .E(n272), .CK(clk), .Q(
+        \led_reg[15] ) );
+  FFEDQHDLX led_reg_reg_0__14_ ( .D(rgb_data[14]), .E(n272), .CK(clk), .Q(
+        \led_reg[14] ) );
+  FFEDQHDLX led_reg_reg_0__13_ ( .D(rgb_data[13]), .E(n272), .CK(clk), .Q(
+        \led_reg[13] ) );
+  FFEDQHDLX led_reg_reg_0__12_ ( .D(rgb_data[12]), .E(n272), .CK(clk), .Q(
+        \led_reg[12] ) );
+  FFEDQHDLX led_reg_reg_0__11_ ( .D(rgb_data[11]), .E(n272), .CK(clk), .Q(
+        \led_reg[11] ) );
+  FFEDQHDLX led_reg_reg_0__10_ ( .D(rgb_data[10]), .E(n271), .CK(clk), .Q(
+        \led_reg[10] ) );
+  FFEDQHDLX led_reg_reg_0__9_ ( .D(rgb_data[9]), .E(n271), .CK(clk), .Q(
+        \led_reg[9] ) );
+  FFEDQHDLX led_reg_reg_0__8_ ( .D(rgb_data[8]), .E(n271), .CK(clk), .Q(
+        \led_reg[8] ) );
+  FFEDQHDLX led_reg_reg_0__7_ ( .D(rgb_data[7]), .E(n271), .CK(clk), .Q(
+        \led_reg[7] ) );
+  FFEDQHDLX led_reg_reg_0__6_ ( .D(rgb_data[6]), .E(n271), .CK(clk), .Q(
+        \led_reg[6] ) );
+  FFEDQHDLX led_reg_reg_0__5_ ( .D(rgb_data[5]), .E(n271), .CK(clk), .Q(
+        \led_reg[5] ) );
+  FFEDQHDLX led_reg_reg_0__4_ ( .D(rgb_data[4]), .E(n271), .CK(clk), .Q(
+        \led_reg[4] ) );
+  FFEDQHDLX led_reg_reg_0__3_ ( .D(rgb_data[3]), .E(n271), .CK(clk), .Q(
+        \led_reg[3] ) );
+  FFEDQHDLX led_reg_reg_0__2_ ( .D(rgb_data[2]), .E(n271), .CK(clk), .Q(
+        \led_reg[2] ) );
+  FFEDQHDLX led_reg_reg_0__1_ ( .D(rgb_data[1]), .E(n271), .CK(clk), .Q(
+        \led_reg[1] ) );
+  FFEDQHDLX led_reg_reg_0__0_ ( .D(rgb_data[0]), .E(n271), .CK(clk), .Q(
+        \led_reg[0] ) );
+  FFEDQHDLX led_reg_reg_7__23_ ( .D(rgb_data[23]), .E(n2620), .CK(clk), .Q(
         \led_reg[191] ) );
-  FFEDQHDLX led_reg_reg_7__22_ ( .D(rgb_data[22]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__22_ ( .D(rgb_data[22]), .E(n2610), .CK(clk), .Q(
         \led_reg[190] ) );
-  FFEDQHDLX led_reg_reg_7__21_ ( .D(rgb_data[21]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__21_ ( .D(rgb_data[21]), .E(n2620), .CK(clk), .Q(
         \led_reg[189] ) );
-  FFEDQHDLX led_reg_reg_7__20_ ( .D(rgb_data[20]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__20_ ( .D(rgb_data[20]), .E(n2620), .CK(clk), .Q(
         \led_reg[188] ) );
-  FFEDQHDLX led_reg_reg_7__19_ ( .D(rgb_data[19]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__19_ ( .D(rgb_data[19]), .E(n2620), .CK(clk), .Q(
         \led_reg[187] ) );
-  FFEDQHDLX led_reg_reg_7__18_ ( .D(rgb_data[18]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__18_ ( .D(rgb_data[18]), .E(n2620), .CK(clk), .Q(
         \led_reg[186] ) );
-  FFEDQHDLX led_reg_reg_7__17_ ( .D(rgb_data[17]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__17_ ( .D(rgb_data[17]), .E(n2620), .CK(clk), .Q(
         \led_reg[185] ) );
-  FFEDQHDLX led_reg_reg_7__16_ ( .D(rgb_data[16]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__16_ ( .D(rgb_data[16]), .E(n2620), .CK(clk), .Q(
         \led_reg[184] ) );
-  FFEDQHDLX led_reg_reg_7__15_ ( .D(rgb_data[15]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__15_ ( .D(rgb_data[15]), .E(n2620), .CK(clk), .Q(
         \led_reg[183] ) );
-  FFEDQHDLX led_reg_reg_7__14_ ( .D(rgb_data[14]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__14_ ( .D(rgb_data[14]), .E(n2620), .CK(clk), .Q(
         \led_reg[182] ) );
-  FFEDQHDLX led_reg_reg_7__13_ ( .D(rgb_data[13]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__13_ ( .D(rgb_data[13]), .E(n2620), .CK(clk), .Q(
         \led_reg[181] ) );
-  FFEDQHDLX led_reg_reg_7__12_ ( .D(rgb_data[12]), .E(n348), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__12_ ( .D(rgb_data[12]), .E(n2620), .CK(clk), .Q(
         \led_reg[180] ) );
-  FFEDQHDLX led_reg_reg_7__11_ ( .D(rgb_data[11]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__11_ ( .D(rgb_data[11]), .E(n2620), .CK(clk), .Q(
         \led_reg[179] ) );
-  FFEDQHDLX led_reg_reg_7__10_ ( .D(rgb_data[10]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__10_ ( .D(rgb_data[10]), .E(n2610), .CK(clk), .Q(
         \led_reg[178] ) );
-  FFEDQHDLX led_reg_reg_7__9_ ( .D(rgb_data[9]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__9_ ( .D(rgb_data[9]), .E(n2610), .CK(clk), .Q(
         \led_reg[177] ) );
-  FFEDQHDLX led_reg_reg_7__8_ ( .D(rgb_data[8]), .E(n347), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__8_ ( .D(rgb_data[8]), .E(n2610), .CK(clk), .Q(
         \led_reg[176] ) );
-  FFEDQHDLX led_reg_reg_7__7_ ( .D(rgb_data[7]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__7_ ( .D(rgb_data[7]), .E(n2610), .CK(clk), .Q(
         \led_reg[175] ) );
-  FFEDQHDLX led_reg_reg_7__6_ ( .D(rgb_data[6]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__6_ ( .D(rgb_data[6]), .E(n2610), .CK(clk), .Q(
         \led_reg[174] ) );
-  FFEDQHDLX led_reg_reg_7__5_ ( .D(rgb_data[5]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__5_ ( .D(rgb_data[5]), .E(n2610), .CK(clk), .Q(
         \led_reg[173] ) );
-  FFEDQHDLX led_reg_reg_7__4_ ( .D(rgb_data[4]), .E(n346), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__4_ ( .D(rgb_data[4]), .E(n2610), .CK(clk), .Q(
         \led_reg[172] ) );
-  FFEDQHDLX led_reg_reg_7__3_ ( .D(rgb_data[3]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__3_ ( .D(rgb_data[3]), .E(n2610), .CK(clk), .Q(
         \led_reg[171] ) );
-  FFEDQHDLX led_reg_reg_7__2_ ( .D(rgb_data[2]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__2_ ( .D(rgb_data[2]), .E(n2610), .CK(clk), .Q(
         \led_reg[170] ) );
-  FFEDQHDLX led_reg_reg_7__1_ ( .D(rgb_data[1]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__1_ ( .D(rgb_data[1]), .E(n2610), .CK(clk), .Q(
         \led_reg[169] ) );
-  FFEDQHDLX led_reg_reg_7__0_ ( .D(rgb_data[0]), .E(n345), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_7__0_ ( .D(rgb_data[0]), .E(n2610), .CK(clk), .Q(
         \led_reg[168] ) );
-  FFEDQHDLX led_reg_reg_6__23_ ( .D(n184), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__23_ ( .D(rgb_data[23]), .E(n2630), .CK(clk), .Q(
         \led_reg[167] ) );
-  FFEDQHDLX led_reg_reg_6__22_ ( .D(rgb_data[22]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__22_ ( .D(rgb_data[22]), .E(n2640), .CK(clk), .Q(
         \led_reg[166] ) );
-  FFEDQHDLX led_reg_reg_6__21_ ( .D(rgb_data[21]), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__21_ ( .D(rgb_data[21]), .E(n2640), .CK(clk), .Q(
         \led_reg[165] ) );
-  FFEDQHDLX led_reg_reg_6__20_ ( .D(rgb_data[20]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__20_ ( .D(rgb_data[20]), .E(n2640), .CK(clk), .Q(
         \led_reg[164] ) );
-  FFEDQHDLX led_reg_reg_6__19_ ( .D(rgb_data[19]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__19_ ( .D(rgb_data[19]), .E(n2640), .CK(clk), .Q(
         \led_reg[163] ) );
-  FFEDQHDLX led_reg_reg_6__18_ ( .D(rgb_data[18]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__18_ ( .D(rgb_data[18]), .E(n2640), .CK(clk), .Q(
         \led_reg[162] ) );
-  FFEDQHDLX led_reg_reg_6__17_ ( .D(rgb_data[17]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__17_ ( .D(rgb_data[17]), .E(n2640), .CK(clk), .Q(
         \led_reg[161] ) );
-  FFEDQHDLX led_reg_reg_6__16_ ( .D(rgb_data[16]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__16_ ( .D(rgb_data[16]), .E(n2640), .CK(clk), .Q(
         \led_reg[160] ) );
-  FFEDQHDLX led_reg_reg_6__15_ ( .D(rgb_data[15]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__15_ ( .D(rgb_data[15]), .E(n2640), .CK(clk), .Q(
         \led_reg[159] ) );
-  FFEDQHDLX led_reg_reg_6__14_ ( .D(rgb_data[14]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__14_ ( .D(rgb_data[14]), .E(n2640), .CK(clk), .Q(
         \led_reg[158] ) );
-  FFEDQHDLX led_reg_reg_6__13_ ( .D(rgb_data[13]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__13_ ( .D(rgb_data[13]), .E(n2640), .CK(clk), .Q(
         \led_reg[157] ) );
-  FFEDQHDLX led_reg_reg_6__12_ ( .D(rgb_data[12]), .E(n354), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__12_ ( .D(rgb_data[12]), .E(n2640), .CK(clk), .Q(
         \led_reg[156] ) );
-  FFEDQHDLX led_reg_reg_6__11_ ( .D(rgb_data[11]), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__11_ ( .D(rgb_data[11]), .E(n2640), .CK(clk), .Q(
         \led_reg[155] ) );
-  FFEDQHDLX led_reg_reg_6__10_ ( .D(rgb_data[10]), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__10_ ( .D(rgb_data[10]), .E(n2630), .CK(clk), .Q(
         \led_reg[154] ) );
-  FFEDQHDLX led_reg_reg_6__9_ ( .D(rgb_data[9]), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__9_ ( .D(rgb_data[9]), .E(n2630), .CK(clk), .Q(
         \led_reg[153] ) );
-  FFEDQHDLX led_reg_reg_6__8_ ( .D(rgb_data[8]), .E(n353), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__8_ ( .D(rgb_data[8]), .E(n2630), .CK(clk), .Q(
         \led_reg[152] ) );
-  FFEDQHDLX led_reg_reg_6__7_ ( .D(rgb_data[7]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__7_ ( .D(rgb_data[7]), .E(n2630), .CK(clk), .Q(
         \led_reg[151] ) );
-  FFEDQHDLX led_reg_reg_6__6_ ( .D(rgb_data[6]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__6_ ( .D(rgb_data[6]), .E(n2630), .CK(clk), .Q(
         \led_reg[150] ) );
-  FFEDQHDLX led_reg_reg_6__5_ ( .D(rgb_data[5]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__5_ ( .D(rgb_data[5]), .E(n2630), .CK(clk), .Q(
         \led_reg[149] ) );
-  FFEDQHDLX led_reg_reg_6__4_ ( .D(rgb_data[4]), .E(n352), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__4_ ( .D(rgb_data[4]), .E(n2630), .CK(clk), .Q(
         \led_reg[148] ) );
-  FFEDQHDLX led_reg_reg_6__3_ ( .D(rgb_data[3]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__3_ ( .D(rgb_data[3]), .E(n2630), .CK(clk), .Q(
         \led_reg[147] ) );
-  FFEDQHDLX led_reg_reg_6__2_ ( .D(rgb_data[2]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__2_ ( .D(rgb_data[2]), .E(n2630), .CK(clk), .Q(
         \led_reg[146] ) );
-  FFEDQHDLX led_reg_reg_6__1_ ( .D(rgb_data[1]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__1_ ( .D(rgb_data[1]), .E(n2630), .CK(clk), .Q(
         \led_reg[145] ) );
-  FFEDQHDLX led_reg_reg_6__0_ ( .D(rgb_data[0]), .E(n351), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_6__0_ ( .D(rgb_data[0]), .E(n2630), .CK(clk), .Q(
         \led_reg[144] ) );
-  FFEDQHDLX led_reg_reg_3__23_ ( .D(rgb_data[23]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__23_ ( .D(rgb_data[23]), .E(n2660), .CK(clk), .Q(
         \led_reg[95] ) );
-  FFEDQHDLX led_reg_reg_3__22_ ( .D(rgb_data[22]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__22_ ( .D(rgb_data[22]), .E(n2650), .CK(clk), .Q(
         \led_reg[94] ) );
-  FFEDQHDLX led_reg_reg_3__21_ ( .D(rgb_data[21]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__21_ ( .D(rgb_data[21]), .E(n2660), .CK(clk), .Q(
         \led_reg[93] ) );
-  FFEDQHDLX led_reg_reg_3__20_ ( .D(rgb_data[20]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__20_ ( .D(rgb_data[20]), .E(n2660), .CK(clk), .Q(
         \led_reg[92] ) );
-  FFEDQHDLX led_reg_reg_3__19_ ( .D(rgb_data[19]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__19_ ( .D(rgb_data[19]), .E(n2660), .CK(clk), .Q(
         \led_reg[91] ) );
-  FFEDQHDLX led_reg_reg_3__18_ ( .D(rgb_data[18]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__18_ ( .D(rgb_data[18]), .E(n2660), .CK(clk), .Q(
         \led_reg[90] ) );
-  FFEDQHDLX led_reg_reg_3__17_ ( .D(rgb_data[17]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__17_ ( .D(rgb_data[17]), .E(n2660), .CK(clk), .Q(
         \led_reg[89] ) );
-  FFEDQHDLX led_reg_reg_3__16_ ( .D(rgb_data[16]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__16_ ( .D(rgb_data[16]), .E(n2660), .CK(clk), .Q(
         \led_reg[88] ) );
-  FFEDQHDLX led_reg_reg_3__15_ ( .D(rgb_data[15]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__15_ ( .D(rgb_data[15]), .E(n2660), .CK(clk), .Q(
         \led_reg[87] ) );
-  FFEDQHDLX led_reg_reg_3__14_ ( .D(rgb_data[14]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__14_ ( .D(rgb_data[14]), .E(n2660), .CK(clk), .Q(
         \led_reg[86] ) );
-  FFEDQHDLX led_reg_reg_3__13_ ( .D(rgb_data[13]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__13_ ( .D(rgb_data[13]), .E(n2660), .CK(clk), .Q(
         \led_reg[85] ) );
-  FFEDQHDLX led_reg_reg_3__12_ ( .D(rgb_data[12]), .E(n360), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__12_ ( .D(rgb_data[12]), .E(n2660), .CK(clk), .Q(
         \led_reg[84] ) );
-  FFEDQHDLX led_reg_reg_3__11_ ( .D(rgb_data[11]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__11_ ( .D(rgb_data[11]), .E(n2660), .CK(clk), .Q(
         \led_reg[83] ) );
-  FFEDQHDLX led_reg_reg_3__10_ ( .D(rgb_data[10]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__10_ ( .D(rgb_data[10]), .E(n2650), .CK(clk), .Q(
         \led_reg[82] ) );
-  FFEDQHDLX led_reg_reg_3__9_ ( .D(rgb_data[9]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__9_ ( .D(rgb_data[9]), .E(n2650), .CK(clk), .Q(
         \led_reg[81] ) );
-  FFEDQHDLX led_reg_reg_3__8_ ( .D(rgb_data[8]), .E(n359), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__8_ ( .D(rgb_data[8]), .E(n2650), .CK(clk), .Q(
         \led_reg[80] ) );
-  FFEDQHDLX led_reg_reg_3__7_ ( .D(rgb_data[7]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__7_ ( .D(rgb_data[7]), .E(n2650), .CK(clk), .Q(
         \led_reg[79] ) );
-  FFEDQHDLX led_reg_reg_3__6_ ( .D(rgb_data[6]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__6_ ( .D(rgb_data[6]), .E(n2650), .CK(clk), .Q(
         \led_reg[78] ) );
-  FFEDQHDLX led_reg_reg_3__5_ ( .D(rgb_data[5]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__5_ ( .D(rgb_data[5]), .E(n2650), .CK(clk), .Q(
         \led_reg[77] ) );
-  FFEDQHDLX led_reg_reg_3__4_ ( .D(rgb_data[4]), .E(n358), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__4_ ( .D(rgb_data[4]), .E(n2650), .CK(clk), .Q(
         \led_reg[76] ) );
-  FFEDQHDLX led_reg_reg_3__3_ ( .D(rgb_data[3]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__3_ ( .D(rgb_data[3]), .E(n2650), .CK(clk), .Q(
         \led_reg[75] ) );
-  FFEDQHDLX led_reg_reg_3__2_ ( .D(rgb_data[2]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__2_ ( .D(rgb_data[2]), .E(n2650), .CK(clk), .Q(
         \led_reg[74] ) );
-  FFEDQHDLX led_reg_reg_3__1_ ( .D(rgb_data[1]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__1_ ( .D(rgb_data[1]), .E(n2650), .CK(clk), .Q(
         \led_reg[73] ) );
-  FFEDQHDLX led_reg_reg_3__0_ ( .D(rgb_data[0]), .E(n357), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_3__0_ ( .D(rgb_data[0]), .E(n2650), .CK(clk), .Q(
         \led_reg[72] ) );
-  FFEDQHDLX led_reg_reg_2__23_ ( .D(rgb_data[23]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__23_ ( .D(rgb_data[23]), .E(n2680), .CK(clk), .Q(
         \led_reg[71] ) );
-  FFEDQHDLX led_reg_reg_2__22_ ( .D(rgb_data[22]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__22_ ( .D(rgb_data[22]), .E(n2670), .CK(clk), .Q(
         \led_reg[70] ) );
-  FFEDQHDLX led_reg_reg_2__21_ ( .D(rgb_data[21]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__21_ ( .D(rgb_data[21]), .E(n2680), .CK(clk), .Q(
         \led_reg[69] ) );
-  FFEDQHDLX led_reg_reg_2__20_ ( .D(rgb_data[20]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__20_ ( .D(rgb_data[20]), .E(n2680), .CK(clk), .Q(
         \led_reg[68] ) );
-  FFEDQHDLX led_reg_reg_2__19_ ( .D(rgb_data[19]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__19_ ( .D(rgb_data[19]), .E(n2680), .CK(clk), .Q(
         \led_reg[67] ) );
-  FFEDQHDLX led_reg_reg_2__18_ ( .D(rgb_data[18]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__18_ ( .D(rgb_data[18]), .E(n2680), .CK(clk), .Q(
         \led_reg[66] ) );
-  FFEDQHDLX led_reg_reg_2__17_ ( .D(rgb_data[17]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__17_ ( .D(rgb_data[17]), .E(n2680), .CK(clk), .Q(
         \led_reg[65] ) );
-  FFEDQHDLX led_reg_reg_2__16_ ( .D(rgb_data[16]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__16_ ( .D(rgb_data[16]), .E(n2680), .CK(clk), .Q(
         \led_reg[64] ) );
-  FFEDQHDLX led_reg_reg_2__15_ ( .D(rgb_data[15]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__15_ ( .D(rgb_data[15]), .E(n2680), .CK(clk), .Q(
         \led_reg[63] ) );
-  FFEDQHDLX led_reg_reg_2__14_ ( .D(rgb_data[14]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__14_ ( .D(rgb_data[14]), .E(n2680), .CK(clk), .Q(
         \led_reg[62] ) );
-  FFEDQHDLX led_reg_reg_2__13_ ( .D(rgb_data[13]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__13_ ( .D(rgb_data[13]), .E(n2680), .CK(clk), .Q(
         \led_reg[61] ) );
-  FFEDQHDLX led_reg_reg_2__12_ ( .D(rgb_data[12]), .E(n366), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__12_ ( .D(rgb_data[12]), .E(n2680), .CK(clk), .Q(
         \led_reg[60] ) );
-  FFEDQHDLX led_reg_reg_2__11_ ( .D(rgb_data[11]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__11_ ( .D(rgb_data[11]), .E(n2680), .CK(clk), .Q(
         \led_reg[59] ) );
-  FFEDQHDLX led_reg_reg_2__10_ ( .D(rgb_data[10]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__10_ ( .D(rgb_data[10]), .E(n2670), .CK(clk), .Q(
         \led_reg[58] ) );
-  FFEDQHDLX led_reg_reg_2__9_ ( .D(rgb_data[9]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__9_ ( .D(rgb_data[9]), .E(n2670), .CK(clk), .Q(
         \led_reg[57] ) );
-  FFEDQHDLX led_reg_reg_2__8_ ( .D(rgb_data[8]), .E(n365), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__8_ ( .D(rgb_data[8]), .E(n2670), .CK(clk), .Q(
         \led_reg[56] ) );
-  FFEDQHDLX led_reg_reg_2__7_ ( .D(rgb_data[7]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__7_ ( .D(rgb_data[7]), .E(n2670), .CK(clk), .Q(
         \led_reg[55] ) );
-  FFEDQHDLX led_reg_reg_2__6_ ( .D(rgb_data[6]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__6_ ( .D(rgb_data[6]), .E(n2670), .CK(clk), .Q(
         \led_reg[54] ) );
-  FFEDQHDLX led_reg_reg_2__5_ ( .D(rgb_data[5]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__5_ ( .D(rgb_data[5]), .E(n2670), .CK(clk), .Q(
         \led_reg[53] ) );
-  FFEDQHDLX led_reg_reg_2__4_ ( .D(rgb_data[4]), .E(n364), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__4_ ( .D(rgb_data[4]), .E(n2670), .CK(clk), .Q(
         \led_reg[52] ) );
-  FFEDQHDLX led_reg_reg_2__3_ ( .D(rgb_data[3]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__3_ ( .D(rgb_data[3]), .E(n2670), .CK(clk), .Q(
         \led_reg[51] ) );
-  FFEDQHDLX led_reg_reg_2__2_ ( .D(rgb_data[2]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__2_ ( .D(rgb_data[2]), .E(n2670), .CK(clk), .Q(
         \led_reg[50] ) );
-  FFEDQHDLX led_reg_reg_2__1_ ( .D(rgb_data[1]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__1_ ( .D(rgb_data[1]), .E(n2670), .CK(clk), .Q(
         \led_reg[49] ) );
-  FFEDQHDLX led_reg_reg_2__0_ ( .D(rgb_data[0]), .E(n363), .CK(clk), .Q(
+  FFEDQHDLX led_reg_reg_2__0_ ( .D(rgb_data[0]), .E(n2670), .CK(clk), .Q(
         \led_reg[48] ) );
+  FFDQHD1X led_color_reg_2_ ( .D(N140), .CK(clk), .Q(\led_color[2] ) );
   FFDQHD1X led_color_reg_0_ ( .D(N142), .CK(clk), .Q(\led_color[0] ) );
   FFDQHD1X led_color_reg_22_ ( .D(N120), .CK(clk), .Q(\led_color[22] ) );
   FFDQHD1X led_color_reg_21_ ( .D(N121), .CK(clk), .Q(\led_color[21] ) );
@@ -346,6 +529,9 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
   FFDQHD1X led_color_reg_13_ ( .D(N129), .CK(clk), .Q(\led_color[13] ) );
   FFDQHD1X led_color_reg_10_ ( .D(N132), .CK(clk), .Q(\led_color[10] ) );
   FFDQHD1X led_color_reg_9_ ( .D(N133), .CK(clk), .Q(\led_color[9] ) );
+  FFDQHD1X led_color_reg_6_ ( .D(N136), .CK(clk), .Q(\led_color[6] ) );
+  FFDQHD1X led_color_reg_4_ ( .D(N138), .CK(clk), .Q(\led_color[4] ) );
+  FFDQHD1X led_color_reg_1_ ( .D(N141), .CK(clk), .Q(\led_color[1] ) );
   FFDQHD1X led_color_reg_3_ ( .D(N139), .CK(clk), .Q(\led_color[3] ) );
   FFDQHD1X led_color_reg_23_ ( .D(N119), .CK(clk), .Q(\led_color[23] ) );
   FFDQHD1X led_color_reg_20_ ( .D(N122), .CK(clk), .Q(\led_color[20] ) );
@@ -355,205 +541,22 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
   FFDQHD1X led_color_reg_12_ ( .D(N130), .CK(clk), .Q(\led_color[12] ) );
   FFDQHD1X led_color_reg_11_ ( .D(N131), .CK(clk), .Q(\led_color[11] ) );
   FFDQHD1X led_color_reg_8_ ( .D(N134), .CK(clk), .Q(\led_color[8] ) );
-  FFEDQHDLX led_reg_reg_5__23_ ( .D(rgb_data[23]), .E(n336), .CK(clk), .Q(
-        \led_reg[143] ) );
-  FFEDQHDLX led_reg_reg_5__22_ ( .D(n182), .E(n335), .CK(clk), .Q(
-        \led_reg[142] ) );
-  FFEDQHDLX led_reg_reg_5__21_ ( .D(n180), .E(n336), .CK(clk), .Q(
-        \led_reg[141] ) );
-  FFEDQHDLX led_reg_reg_5__20_ ( .D(n178), .E(n335), .CK(clk), .Q(
-        \led_reg[140] ) );
-  FFEDQHDLX led_reg_reg_5__19_ ( .D(n176), .E(n334), .CK(clk), .Q(
-        \led_reg[139] ) );
-  FFEDQHDLX led_reg_reg_5__18_ ( .D(n174), .E(n333), .CK(clk), .Q(
-        \led_reg[138] ) );
-  FFEDQHDLX led_reg_reg_5__17_ ( .D(n172), .E(n334), .CK(clk), .Q(
-        \led_reg[137] ) );
-  FFEDQHDLX led_reg_reg_5__16_ ( .D(n170), .E(n333), .CK(clk), .Q(
-        \led_reg[136] ) );
-  FFEDQHDLX led_reg_reg_5__15_ ( .D(n168), .E(n336), .CK(clk), .Q(
-        \led_reg[135] ) );
-  FFEDQHDLX led_reg_reg_5__14_ ( .D(n166), .E(n336), .CK(clk), .Q(
-        \led_reg[134] ) );
-  FFEDQHDLX led_reg_reg_5__13_ ( .D(n164), .E(n336), .CK(clk), .Q(
-        \led_reg[133] ) );
-  FFEDQHDLX led_reg_reg_5__12_ ( .D(n162), .E(n336), .CK(clk), .Q(
-        \led_reg[132] ) );
-  FFEDQHDLX led_reg_reg_5__11_ ( .D(n160), .E(n335), .CK(clk), .Q(
-        \led_reg[131] ) );
-  FFEDQHDLX led_reg_reg_5__10_ ( .D(n1580), .E(n335), .CK(clk), .Q(
-        \led_reg[130] ) );
-  FFEDQHDLX led_reg_reg_5__9_ ( .D(n1560), .E(n335), .CK(clk), .Q(
-        \led_reg[129] ) );
-  FFEDQHDLX led_reg_reg_5__8_ ( .D(n1540), .E(n335), .CK(clk), .Q(
-        \led_reg[128] ) );
-  FFEDQHDLX led_reg_reg_5__7_ ( .D(n1520), .E(n334), .CK(clk), .Q(
-        \led_reg[127] ) );
-  FFEDQHDLX led_reg_reg_5__6_ ( .D(n1500), .E(n334), .CK(clk), .Q(
-        \led_reg[126] ) );
-  FFEDQHDLX led_reg_reg_5__5_ ( .D(n1480), .E(n334), .CK(clk), .Q(
-        \led_reg[125] ) );
-  FFEDQHDLX led_reg_reg_5__4_ ( .D(n146), .E(n334), .CK(clk), .Q(
-        \led_reg[124] ) );
-  FFEDQHDLX led_reg_reg_5__3_ ( .D(n144), .E(n333), .CK(clk), .Q(
-        \led_reg[123] ) );
-  FFEDQHDLX led_reg_reg_5__2_ ( .D(n1420), .E(n333), .CK(clk), .Q(
-        \led_reg[122] ) );
-  FFEDQHDLX led_reg_reg_5__1_ ( .D(n1400), .E(n333), .CK(clk), .Q(
-        \led_reg[121] ) );
-  FFEDQHDLX led_reg_reg_5__0_ ( .D(n1380), .E(n333), .CK(clk), .Q(
-        \led_reg[120] ) );
-  FFEDQHDLX led_reg_reg_4__23_ ( .D(n184), .E(n342), .CK(clk), .Q(
-        \led_reg[119] ) );
-  FFEDQHDLX led_reg_reg_4__22_ ( .D(n182), .E(n341), .CK(clk), .Q(
-        \led_reg[118] ) );
-  FFEDQHDLX led_reg_reg_4__21_ ( .D(n180), .E(n342), .CK(clk), .Q(
-        \led_reg[117] ) );
-  FFEDQHDLX led_reg_reg_4__20_ ( .D(n178), .E(n341), .CK(clk), .Q(
-        \led_reg[116] ) );
-  FFEDQHDLX led_reg_reg_4__19_ ( .D(n176), .E(n340), .CK(clk), .Q(
-        \led_reg[115] ) );
-  FFEDQHDLX led_reg_reg_4__18_ ( .D(n174), .E(n339), .CK(clk), .Q(
-        \led_reg[114] ) );
-  FFEDQHDLX led_reg_reg_4__17_ ( .D(n172), .E(n340), .CK(clk), .Q(
-        \led_reg[113] ) );
-  FFEDQHDLX led_reg_reg_4__16_ ( .D(n170), .E(n339), .CK(clk), .Q(
-        \led_reg[112] ) );
-  FFEDQHDLX led_reg_reg_4__15_ ( .D(n168), .E(n342), .CK(clk), .Q(
-        \led_reg[111] ) );
-  FFEDQHDLX led_reg_reg_4__14_ ( .D(n166), .E(n342), .CK(clk), .Q(
-        \led_reg[110] ) );
-  FFEDQHDLX led_reg_reg_4__13_ ( .D(n164), .E(n342), .CK(clk), .Q(
-        \led_reg[109] ) );
-  FFEDQHDLX led_reg_reg_4__12_ ( .D(n162), .E(n342), .CK(clk), .Q(
-        \led_reg[108] ) );
-  FFEDQHDLX led_reg_reg_4__11_ ( .D(n160), .E(n341), .CK(clk), .Q(
-        \led_reg[107] ) );
-  FFEDQHDLX led_reg_reg_4__10_ ( .D(n1580), .E(n341), .CK(clk), .Q(
-        \led_reg[106] ) );
-  FFEDQHDLX led_reg_reg_4__9_ ( .D(n1560), .E(n341), .CK(clk), .Q(
-        \led_reg[105] ) );
-  FFEDQHDLX led_reg_reg_4__8_ ( .D(n1540), .E(n341), .CK(clk), .Q(
-        \led_reg[104] ) );
-  FFEDQHDLX led_reg_reg_4__7_ ( .D(n1520), .E(n340), .CK(clk), .Q(
-        \led_reg[103] ) );
-  FFEDQHDLX led_reg_reg_4__6_ ( .D(n1500), .E(n340), .CK(clk), .Q(
-        \led_reg[102] ) );
-  FFEDQHDLX led_reg_reg_4__5_ ( .D(n1480), .E(n340), .CK(clk), .Q(
-        \led_reg[101] ) );
-  FFEDQHDLX led_reg_reg_4__4_ ( .D(n146), .E(n340), .CK(clk), .Q(
-        \led_reg[100] ) );
-  FFEDQHDLX led_reg_reg_4__3_ ( .D(n144), .E(n339), .CK(clk), .Q(\led_reg[99] ) );
-  FFEDQHDLX led_reg_reg_4__2_ ( .D(n1420), .E(n339), .CK(clk), .Q(
-        \led_reg[98] ) );
-  FFEDQHDLX led_reg_reg_4__1_ ( .D(n1400), .E(n339), .CK(clk), .Q(
-        \led_reg[97] ) );
-  FFEDQHDLX led_reg_reg_4__0_ ( .D(n1380), .E(n339), .CK(clk), .Q(
-        \led_reg[96] ) );
-  FFEDQHDLX led_reg_reg_1__23_ ( .D(n184), .E(n372), .CK(clk), .Q(
-        \led_reg[47] ) );
-  FFEDQHDLX led_reg_reg_1__22_ ( .D(n182), .E(n371), .CK(clk), .Q(
-        \led_reg[46] ) );
-  FFEDQHDLX led_reg_reg_1__21_ ( .D(n180), .E(n372), .CK(clk), .Q(
-        \led_reg[45] ) );
-  FFEDQHDLX led_reg_reg_1__20_ ( .D(n178), .E(n371), .CK(clk), .Q(
-        \led_reg[44] ) );
-  FFEDQHDLX led_reg_reg_1__19_ ( .D(n176), .E(n370), .CK(clk), .Q(
-        \led_reg[43] ) );
-  FFEDQHDLX led_reg_reg_1__18_ ( .D(n174), .E(n369), .CK(clk), .Q(
-        \led_reg[42] ) );
-  FFEDQHDLX led_reg_reg_1__17_ ( .D(n172), .E(n370), .CK(clk), .Q(
-        \led_reg[41] ) );
-  FFEDQHDLX led_reg_reg_1__16_ ( .D(n170), .E(n369), .CK(clk), .Q(
-        \led_reg[40] ) );
-  FFEDQHDLX led_reg_reg_1__15_ ( .D(n168), .E(n372), .CK(clk), .Q(
-        \led_reg[39] ) );
-  FFEDQHDLX led_reg_reg_1__14_ ( .D(n166), .E(n372), .CK(clk), .Q(
-        \led_reg[38] ) );
-  FFEDQHDLX led_reg_reg_1__13_ ( .D(n164), .E(n372), .CK(clk), .Q(
-        \led_reg[37] ) );
-  FFEDQHDLX led_reg_reg_1__12_ ( .D(n162), .E(n372), .CK(clk), .Q(
-        \led_reg[36] ) );
-  FFEDQHDLX led_reg_reg_1__11_ ( .D(n160), .E(n371), .CK(clk), .Q(
-        \led_reg[35] ) );
-  FFEDQHDLX led_reg_reg_1__10_ ( .D(n1580), .E(n371), .CK(clk), .Q(
-        \led_reg[34] ) );
-  FFEDQHDLX led_reg_reg_1__9_ ( .D(n1560), .E(n371), .CK(clk), .Q(
-        \led_reg[33] ) );
-  FFEDQHDLX led_reg_reg_1__8_ ( .D(n1540), .E(n371), .CK(clk), .Q(
-        \led_reg[32] ) );
-  FFEDQHDLX led_reg_reg_1__7_ ( .D(n1520), .E(n370), .CK(clk), .Q(
-        \led_reg[31] ) );
-  FFEDQHDLX led_reg_reg_1__6_ ( .D(n1500), .E(n370), .CK(clk), .Q(
-        \led_reg[30] ) );
-  FFEDQHDLX led_reg_reg_1__5_ ( .D(n1480), .E(n370), .CK(clk), .Q(
-        \led_reg[29] ) );
-  FFEDQHDLX led_reg_reg_1__4_ ( .D(n146), .E(n370), .CK(clk), .Q(\led_reg[28] ) );
-  FFEDQHDLX led_reg_reg_1__3_ ( .D(n144), .E(n369), .CK(clk), .Q(\led_reg[27] ) );
-  FFEDQHDLX led_reg_reg_1__2_ ( .D(n1420), .E(n369), .CK(clk), .Q(
-        \led_reg[26] ) );
-  FFEDQHDLX led_reg_reg_1__1_ ( .D(n1400), .E(n369), .CK(clk), .Q(
-        \led_reg[25] ) );
-  FFEDQHDLX led_reg_reg_1__0_ ( .D(n1380), .E(n369), .CK(clk), .Q(
-        \led_reg[24] ) );
-  FFEDQHDLX led_reg_reg_0__23_ ( .D(n184), .E(n378), .CK(clk), .Q(
-        \led_reg[23] ) );
-  FFEDQHDLX led_reg_reg_0__22_ ( .D(n182), .E(n377), .CK(clk), .Q(
-        \led_reg[22] ) );
-  FFEDQHDLX led_reg_reg_0__21_ ( .D(n180), .E(n378), .CK(clk), .Q(
-        \led_reg[21] ) );
-  FFEDQHDLX led_reg_reg_0__20_ ( .D(n178), .E(n377), .CK(clk), .Q(
-        \led_reg[20] ) );
-  FFEDQHDLX led_reg_reg_0__19_ ( .D(n176), .E(n376), .CK(clk), .Q(
-        \led_reg[19] ) );
-  FFEDQHDLX led_reg_reg_0__18_ ( .D(n174), .E(n375), .CK(clk), .Q(
-        \led_reg[18] ) );
-  FFEDQHDLX led_reg_reg_0__17_ ( .D(n172), .E(n376), .CK(clk), .Q(
-        \led_reg[17] ) );
-  FFEDQHDLX led_reg_reg_0__16_ ( .D(n170), .E(n375), .CK(clk), .Q(
-        \led_reg[16] ) );
-  FFEDQHDLX led_reg_reg_0__15_ ( .D(n168), .E(n378), .CK(clk), .Q(
-        \led_reg[15] ) );
-  FFEDQHDLX led_reg_reg_0__14_ ( .D(n166), .E(n378), .CK(clk), .Q(
-        \led_reg[14] ) );
-  FFEDQHDLX led_reg_reg_0__13_ ( .D(n164), .E(n378), .CK(clk), .Q(
-        \led_reg[13] ) );
-  FFEDQHDLX led_reg_reg_0__12_ ( .D(n162), .E(n378), .CK(clk), .Q(
-        \led_reg[12] ) );
-  FFEDQHDLX led_reg_reg_0__11_ ( .D(n160), .E(n377), .CK(clk), .Q(
-        \led_reg[11] ) );
-  FFEDQHDLX led_reg_reg_0__10_ ( .D(n1580), .E(n377), .CK(clk), .Q(
-        \led_reg[10] ) );
-  FFEDQHDLX led_reg_reg_0__9_ ( .D(n1560), .E(n377), .CK(clk), .Q(\led_reg[9] ) );
-  FFEDQHDLX led_reg_reg_0__8_ ( .D(n1540), .E(n377), .CK(clk), .Q(\led_reg[8] ) );
-  FFEDQHDLX led_reg_reg_0__7_ ( .D(n1520), .E(n376), .CK(clk), .Q(\led_reg[7] ) );
-  FFEDQHDLX led_reg_reg_0__6_ ( .D(n1500), .E(n376), .CK(clk), .Q(\led_reg[6] ) );
-  FFEDQHDLX led_reg_reg_0__5_ ( .D(n1480), .E(n376), .CK(clk), .Q(\led_reg[5] ) );
-  FFEDQHDLX led_reg_reg_0__4_ ( .D(n146), .E(n376), .CK(clk), .Q(\led_reg[4] )
-         );
-  FFEDQHDLX led_reg_reg_0__3_ ( .D(n144), .E(n375), .CK(clk), .Q(\led_reg[3] )
-         );
-  FFEDQHDLX led_reg_reg_0__2_ ( .D(n1420), .E(n375), .CK(clk), .Q(\led_reg[2] ) );
-  FFEDQHDLX led_reg_reg_0__1_ ( .D(n1400), .E(n375), .CK(clk), .Q(\led_reg[1] ) );
-  FFEDQHDLX led_reg_reg_0__0_ ( .D(n1380), .E(n375), .CK(clk), .Q(\led_reg[0] ) );
-  FFDQHD1X led_color_reg_2_ ( .D(N140), .CK(clk), .Q(\led_color[2] ) );
   FFDQHD1X led_color_reg_5_ ( .D(N137), .CK(clk), .Q(\led_color[5] ) );
-  FFDQHD1X led_color_reg_6_ ( .D(N136), .CK(clk), .Q(\led_color[6] ) );
-  FFDQHD1X led_color_reg_4_ ( .D(N138), .CK(clk), .Q(\led_color[4] ) );
-  FFDQHD1X led_color_reg_1_ ( .D(N141), .CK(clk), .Q(\led_color[1] ) );
   FFDQHD1X led_color_reg_7_ ( .D(N135), .CK(clk), .Q(\led_color[7] ) );
-  FFDCRHD1X bit_counter_reg_3_ ( .D(n31), .RN(N261), .CK(clk), .Q(
-        \bit_counter[3] ), .QN(n455) );
   FFDQHD1X led_counter_reg_0_ ( .D(n22), .CK(clk), .Q(N99) );
   FFDQHD1X state_reg_0_ ( .D(n21), .CK(clk), .Q(state_0_) );
-  FFDCRHD1X bit_counter_reg_8_ ( .D(n31), .RN(N266), .CK(clk), .Q(
-        \bit_counter[8] ), .QN(n458) );
-  FFDCRHD1X bit_counter_reg_10_ ( .D(n31), .RN(N268), .CK(clk), .Q(
-        \bit_counter[10] ), .QN(n454) );
-  FFDCRHD1X bit_counter_reg_1_ ( .D(n31), .RN(N259), .CK(clk), .Q(
-        \bit_counter[1] ), .QN(n457) );
+  FFDQHD1X led_counter_reg_1_ ( .D(n16), .CK(clk), .Q(N100) );
+  FFDQHD1X led_counter_reg_2_ ( .D(n15), .CK(clk), .Q(N101) );
   FFDCRHD1X bit_counter_reg_2_ ( .D(n31), .RN(N260), .CK(clk), .Q(
-        \bit_counter[2] ), .QN(n456) );
+        \bit_counter[2] ), .QN(n348) );
+  FFDCRHD1X bit_counter_reg_3_ ( .D(n31), .RN(N261), .CK(clk), .Q(
+        \bit_counter[3] ), .QN(n347) );
+  FFDCRHD1X bit_counter_reg_10_ ( .D(n31), .RN(N268), .CK(clk), .Q(
+        \bit_counter[10] ), .QN(n346) );
+  FFDCRHD1X bit_counter_reg_8_ ( .D(n31), .RN(N266), .CK(clk), .Q(
+        \bit_counter[8] ), .QN(n350) );
+  FFDCRHD1X bit_counter_reg_1_ ( .D(n31), .RN(N259), .CK(clk), .Q(
+        \bit_counter[1] ), .QN(n349) );
   FFDQHD1X bit_counter_reg_11_ ( .D(n9), .CK(clk), .Q(\bit_counter[11] ) );
   FFDQHD1X bit_counter_reg_9_ ( .D(n10), .CK(clk), .Q(\bit_counter[9] ) );
   FFDQHD1X bit_counter_reg_4_ ( .D(n14), .CK(clk), .Q(\bit_counter[4] ) );
@@ -561,10 +564,14 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
   FFDQHD1X bit_counter_reg_6_ ( .D(n12), .CK(clk), .Q(\bit_counter[6] ) );
   FFDQHD1X bit_counter_reg_5_ ( .D(n13), .CK(clk), .Q(\bit_counter[5] ) );
   FFDQHD1X rgb_counter_reg_4_ ( .D(n17), .CK(clk), .Q(\rgb_counter[4] ) );
+  FFDQHD1X rgb_counter_reg_2_ ( .D(n18), .CK(clk), .Q(\rgb_counter[2] ) );
+  FFDQHD1X rgb_counter_reg_1_ ( .D(n20), .CK(clk), .Q(\rgb_counter[1] ) );
+  FFDQHD1X rgb_counter_reg_0_ ( .D(n19), .CK(clk), .Q(\rgb_counter[0] ) );
   OR2HD1X U18 ( .A(reset), .B(n116), .Z(n20) );
   OR2HD1X U17 ( .A(reset), .B(n115), .Z(n19) );
   OR2HD1X U16 ( .A(reset), .B(n114), .Z(n18) );
   OR2HD1X U15 ( .A(reset), .B(n112), .Z(n17) );
+  OR2HD1X U19 ( .A(reset), .B(n117), .Z(n21) );
   OR2HD1X U22 ( .A(reset), .B(n1190), .Z(n22) );
   OR2HD1X U13 ( .A(reset), .B(n118), .Z(n15) );
   OR2HD1X U8 ( .A(reset), .B(N262), .Z(n14) );
@@ -573,501 +580,392 @@ module ws2812 ( rgb_data, led_num, write, reset, clk, data );
   OR2HD1X U5 ( .A(reset), .B(N265), .Z(n11) );
   OR2HD1X U4 ( .A(reset), .B(N267), .Z(n10) );
   OR2HD1X U3 ( .A(reset), .B(N269), .Z(n9) );
-  OR2HD1X U19 ( .A(reset), .B(n117), .Z(n21) );
   OR2HD1X U14 ( .A(reset), .B(n111), .Z(n16) );
-  FFDQHD1X led_counter_reg_1_ ( .D(n16), .CK(clk), .Q(N100) );
-  FFDCRHD1X data_reg ( .D(n31), .RN(N257), .CK(clk), .QN(n1350) );
-  FFDQHD1X rgb_counter_reg_0_ ( .D(n19), .CK(clk), .Q(\rgb_counter[0] ) );
+  FFDCRHD1X data_reg ( .D(n31), .RN(N257), .CK(clk), .Q(data) );
   FFDCRHDLX bit_counter_reg_0_ ( .D(n31), .RN(N258), .CK(clk), .Q(
-        \bit_counter[0] ), .QN(n453) );
-  FFDCRHD1X rgb_counter_reg_3_ ( .D(n31), .RN(n113), .CK(clk), .Q(
-        \rgb_counter[3] ), .QN(n406) );
-  FFDHD1X rgb_counter_reg_2_ ( .D(n18), .CK(clk), .Q(\rgb_counter[2] ), .QN(
-        n385) );
-  FFDHD1X led_counter_reg_2_ ( .D(n15), .CK(clk), .Q(N101), .QN(n295) );
-  FFDHD2X rgb_counter_reg_1_ ( .D(n20), .CK(clk), .Q(\rgb_counter[1] ), .QN(
-        n449) );
-  INVHDPX U131 ( .A(N215), .Z(n188) );
-  INVHD1X U132 ( .A(n1220), .Z(n337) );
-  INVHD1X U133 ( .A(n1230), .Z(n355) );
-  NAND2HD1X U134 ( .A(n195), .B(n297), .Z(n1200) );
-  INVHDLX U135 ( .A(N99), .Z(n185) );
-  NOR3HD1X U136 ( .A(n388), .B(n387), .C(n386), .Z(n1210) );
-  NOR3HD1X U137 ( .A(n386), .B(led_num[1]), .C(n387), .Z(n1220) );
-  NOR3HD1X U138 ( .A(n388), .B(led_num[0]), .C(n387), .Z(n1230) );
-  NOR3HD1X U139 ( .A(n390), .B(led_num[1]), .C(led_num[0]), .Z(n1240) );
-  NOR3HD1X U140 ( .A(n390), .B(led_num[1]), .C(n386), .Z(n1250) );
-  NOR3HD1X U141 ( .A(n387), .B(led_num[1]), .C(led_num[0]), .Z(n1260) );
-  NOR3HD1X U142 ( .A(n390), .B(led_num[0]), .C(n388), .Z(n1270) );
-  NOR3HD1X U143 ( .A(n390), .B(n386), .C(n388), .Z(n1280) );
-  NAND2HD1X U144 ( .A(n192), .B(n186), .Z(n1290) );
-  NAND2HD1X U145 ( .A(n194), .B(n186), .Z(n1300) );
-  OR2HD1X U146 ( .A(\rgb_counter[2] ), .B(\rgb_counter[3] ), .Z(n1310) );
-  NAND2HD1X U147 ( .A(n192), .B(N99), .Z(n1320) );
-  NAND2HD1X U148 ( .A(n193), .B(n297), .Z(n1330) );
-  OR2HD1X U149 ( .A(\rgb_counter[4] ), .B(n191), .Z(n1340) );
-  INVHD2X U150 ( .A(n1350), .Z(data) );
-  INVHDPX U151 ( .A(rgb_data[0]), .Z(n1370) );
-  INVHDPX U152 ( .A(n1370), .Z(n1380) );
-  INVHDPX U153 ( .A(rgb_data[1]), .Z(n1390) );
-  INVHDPX U154 ( .A(n1390), .Z(n1400) );
-  INVHDPX U155 ( .A(rgb_data[2]), .Z(n1410) );
-  INVHDPX U156 ( .A(n1410), .Z(n1420) );
-  INVHDPX U157 ( .A(rgb_data[3]), .Z(n143) );
-  INVHDPX U158 ( .A(n143), .Z(n144) );
-  INVHDPX U159 ( .A(rgb_data[4]), .Z(n145) );
-  INVHDPX U160 ( .A(n145), .Z(n146) );
-  INVHDPX U161 ( .A(rgb_data[5]), .Z(n147) );
-  INVHDPX U162 ( .A(n147), .Z(n1480) );
-  INVHDPX U163 ( .A(rgb_data[6]), .Z(n1490) );
-  INVHDPX U164 ( .A(n1490), .Z(n1500) );
-  INVHDPX U165 ( .A(rgb_data[7]), .Z(n1510) );
-  INVHDPX U166 ( .A(n1510), .Z(n1520) );
-  INVHDPX U167 ( .A(rgb_data[8]), .Z(n1530) );
-  INVHDPX U168 ( .A(n1530), .Z(n1540) );
-  INVHDPX U169 ( .A(rgb_data[9]), .Z(n1550) );
-  INVHDPX U170 ( .A(n1550), .Z(n1560) );
-  INVHDPX U171 ( .A(rgb_data[10]), .Z(n1570) );
-  INVHDPX U172 ( .A(n1570), .Z(n1580) );
-  INVHDPX U173 ( .A(rgb_data[11]), .Z(n1590) );
-  INVHDPX U174 ( .A(n1590), .Z(n160) );
-  INVHDPX U175 ( .A(rgb_data[12]), .Z(n161) );
-  INVHDPX U176 ( .A(n161), .Z(n162) );
-  INVHDPX U177 ( .A(rgb_data[13]), .Z(n163) );
-  INVHDPX U178 ( .A(n163), .Z(n164) );
-  INVHDPX U179 ( .A(rgb_data[14]), .Z(n165) );
-  INVHDPX U180 ( .A(n165), .Z(n166) );
-  INVHDPX U181 ( .A(rgb_data[15]), .Z(n167) );
-  INVHDPX U182 ( .A(n167), .Z(n168) );
-  INVHDPX U183 ( .A(rgb_data[16]), .Z(n169) );
-  INVHDPX U184 ( .A(n169), .Z(n170) );
-  INVHDPX U185 ( .A(rgb_data[17]), .Z(n171) );
-  INVHDPX U186 ( .A(n171), .Z(n172) );
-  INVHDPX U187 ( .A(rgb_data[18]), .Z(n173) );
-  INVHDPX U188 ( .A(n173), .Z(n174) );
-  INVHDPX U189 ( .A(rgb_data[19]), .Z(n175) );
-  INVHDPX U190 ( .A(n175), .Z(n176) );
-  INVHDPX U191 ( .A(rgb_data[20]), .Z(n177) );
-  INVHDPX U192 ( .A(n177), .Z(n178) );
-  INVHDPX U193 ( .A(rgb_data[21]), .Z(n179) );
-  INVHDPX U194 ( .A(n179), .Z(n180) );
-  INVHDPX U195 ( .A(rgb_data[22]), .Z(n181) );
-  INVHDPX U196 ( .A(n181), .Z(n182) );
-  INVHDPX U197 ( .A(rgb_data[23]), .Z(n183) );
-  INVHDPX U198 ( .A(n183), .Z(n184) );
-  INVHD1X U199 ( .A(N99), .Z(n186) );
-  BUFCLKHD2X U200 ( .A(n408), .Z(n187) );
-  NOR2HD1X U201 ( .A(n1310), .B(n1340), .Z(n408) );
-  NOR2HD2X U202 ( .A(\rgb_counter[0] ), .B(\rgb_counter[1] ), .Z(n433) );
-  AOI21HDLX U203 ( .A(n188), .B(\rgb_counter[1] ), .C(n382), .Z(n381) );
-  AOI22HDLX U204 ( .A(\led_reg[47] ), .B(n311), .C(\led_reg[95] ), .D(n306), 
-        .Z(n293) );
-  AOI22HDLX U205 ( .A(\led_reg[131] ), .B(n304), .C(\led_reg[179] ), .D(n300), 
-        .Z(n243) );
-  AOI22HDLX U206 ( .A(\led_reg[41] ), .B(n312), .C(\led_reg[89] ), .D(n307), 
-        .Z(n2660) );
-  AOI22HDLX U207 ( .A(\led_reg[125] ), .B(n305), .C(\led_reg[173] ), .D(n301), 
-        .Z(n2190) );
-  AOI222HD1X U208 ( .A(\led_color[2] ), .B(n432), .C(\led_color[1] ), .D(n430), 
-        .E(\led_color[3] ), .F(n431), .Z(n437) );
-  AND2HD2X U209 ( .A(\rgb_counter[0] ), .B(n449), .Z(n430) );
-  INVHDPX U210 ( .A(state_0_), .Z(n399) );
-  AOI22HDLX U211 ( .A(\led_reg[119] ), .B(n320), .C(\led_reg[167] ), .D(n316), 
-        .Z(n292) );
-  AOI22HDLX U212 ( .A(\led_reg[17] ), .B(n330), .C(\led_reg[65] ), .D(n326), 
-        .Z(n2640) );
-  AOI22HDLX U213 ( .A(\led_reg[143] ), .B(n302), .C(\led_reg[191] ), .D(n298), 
-        .Z(n294) );
-  AOI22HDLX U214 ( .A(\led_reg[113] ), .B(n321), .C(\led_reg[161] ), .D(n317), 
-        .Z(n2650) );
-  AOI22HDLX U215 ( .A(\led_reg[11] ), .B(n331), .C(\led_reg[59] ), .D(n327), 
-        .Z(n240) );
-  AOI22HDLX U216 ( .A(\led_reg[29] ), .B(n314), .C(\led_reg[77] ), .D(n309), 
-        .Z(n2180) );
-  AOI22HDLX U217 ( .A(\led_color[21] ), .B(n430), .C(\led_color[23] ), .D(n431), .Z(n429) );
-  AOI22HDLX U218 ( .A(\led_color[17] ), .B(n430), .C(\led_color[19] ), .D(n431), .Z(n435) );
-  AOI22HDLX U219 ( .A(\led_color[5] ), .B(n430), .C(\led_color[7] ), .D(n431), 
-        .Z(n440) );
-  AOI22HDLX U220 ( .A(\led_color[13] ), .B(n430), .C(\led_color[15] ), .D(n431), .Z(n446) );
-  AOI22HDLX U221 ( .A(\led_color[9] ), .B(n430), .C(\led_color[11] ), .D(n431), 
-        .Z(n448) );
-  AND2HD2X U222 ( .A(n188), .B(\rgb_counter[1] ), .Z(n431) );
-  MUXI2HDLX U223 ( .A(\rgb_counter[1] ), .B(N216), .S0(n403), .Z(n401) );
-  MUXI2HDLX U224 ( .A(n188), .B(N215), .S0(n403), .Z(n404) );
-  MUXI2HDLX U225 ( .A(\rgb_counter[2] ), .B(N217), .S0(n403), .Z(n405) );
-  MUXI2HDLX U226 ( .A(n406), .B(n407), .S0(n403), .Z(n113) );
-  OAI21HD2X U227 ( .A(state_0_), .B(n187), .C(n403), .Z(n402) );
-  NAND2HD2X U228 ( .A(n399), .B(n189), .Z(n403) );
-  XNOR2HDLX U229 ( .A(n186), .B(n395), .Z(n393) );
-  OAI21HDLX U230 ( .A(n395), .B(N99), .C(N100), .Z(n411) );
-  AOI21HD2X U231 ( .A(n398), .B(n408), .C(state_0_), .Z(n395) );
-  AOI22HDLX U232 ( .A(\led_reg[23] ), .B(n329), .C(\led_reg[71] ), .D(n325), 
-        .Z(n291) );
-  AOI22HDLX U233 ( .A(\led_reg[107] ), .B(n322), .C(\led_reg[155] ), .D(n318), 
-        .Z(n241) );
-  AOI22HDLX U234 ( .A(\led_reg[137] ), .B(n303), .C(\led_reg[185] ), .D(n299), 
-        .Z(n2670) );
-  AOI22HDLX U235 ( .A(\led_reg[35] ), .B(n313), .C(\led_reg[83] ), .D(n308), 
-        .Z(n242) );
-  AOI22HDLX U236 ( .A(\led_reg[5] ), .B(n332), .C(\led_reg[53] ), .D(n328), 
-        .Z(n2160) );
-  AOI22HDLX U237 ( .A(\led_reg[101] ), .B(n323), .C(\led_reg[149] ), .D(n319), 
-        .Z(n2170) );
-  AND4HD1X U238 ( .A(n453), .B(n455), .C(n417), .D(n418), .Z(n410) );
-  INVHDPX U239 ( .A(n410), .Z(n189) );
-  INVHDPX U240 ( .A(n410), .Z(n190) );
-  AOI22HDLX U241 ( .A(\led_color[22] ), .B(n432), .C(\led_color[20] ), .D(n433), .Z(n428) );
-  AOI22HDLX U242 ( .A(\led_color[18] ), .B(n432), .C(\led_color[16] ), .D(n433), .Z(n434) );
-  AOI22HDLX U243 ( .A(\led_color[14] ), .B(n432), .C(\led_color[12] ), .D(n433), .Z(n445) );
-  AOI22HDLX U244 ( .A(\led_color[10] ), .B(n432), .C(\led_color[8] ), .D(n433), 
-        .Z(n447) );
-  NOR2HD2X U245 ( .A(n449), .B(n188), .Z(n432) );
-  OAI21B2HDLX U246 ( .AN(N159), .BN(n190), .C(n400), .Z(N269) );
-  OAI21B2HDLX U247 ( .AN(N157), .BN(n190), .C(n400), .Z(N267) );
-  OAI21B2HDLX U248 ( .AN(N155), .BN(n190), .C(n400), .Z(N265) );
-  OAI21B2HDLX U249 ( .AN(N154), .BN(n189), .C(n400), .Z(N264) );
-  OAI21B2HDLX U250 ( .AN(N153), .BN(n189), .C(n400), .Z(N263) );
-  OAI21B2HDLX U251 ( .AN(N152), .BN(n189), .C(n400), .Z(N262) );
-  OAI21HDLX U252 ( .A(n398), .B(n399), .C(n400), .Z(n117) );
-  INVHD1X U253 ( .A(n433), .Z(n191) );
-  NAND3B1HDLX U254 ( .AN(n187), .B(n399), .C(N218), .Z(n407) );
-  NAND3B1HD2X U255 ( .AN(n414), .B(n187), .C(n412), .Z(n400) );
-  AOI31HDLX U256 ( .A(n412), .B(n399), .C(n187), .D(n189), .Z(n416) );
-  AOI22B2HDLX U257 ( .C(\led_color[0] ), .D(n408), .AN(n418), .BN(n455), .Z(
-        n442) );
-  INVHDPX U258 ( .A(n362), .Z(n357) );
-  INVHDPX U259 ( .A(n362), .Z(n358) );
-  INVHDPX U260 ( .A(n361), .Z(n359) );
-  INVHDPX U261 ( .A(n361), .Z(n360) );
-  INVHDPX U262 ( .A(n350), .Z(n345) );
-  INVHDPX U263 ( .A(n350), .Z(n346) );
-  INVHDPX U264 ( .A(n349), .Z(n347) );
-  INVHDPX U265 ( .A(n349), .Z(n348) );
-  INVHDPX U266 ( .A(n380), .Z(n375) );
-  INVHDPX U267 ( .A(n380), .Z(n376) );
-  INVHDPX U268 ( .A(n379), .Z(n377) );
-  INVHDPX U269 ( .A(n379), .Z(n378) );
-  INVHDPX U270 ( .A(n374), .Z(n369) );
-  INVHDPX U271 ( .A(n374), .Z(n370) );
-  INVHDPX U272 ( .A(n373), .Z(n371) );
-  INVHDPX U273 ( .A(n373), .Z(n372) );
-  INVHDPX U274 ( .A(n368), .Z(n363) );
-  INVHDPX U275 ( .A(n368), .Z(n364) );
-  INVHDPX U276 ( .A(n367), .Z(n365) );
-  INVHDPX U277 ( .A(n367), .Z(n366) );
-  INVHDPX U278 ( .A(n344), .Z(n339) );
-  INVHDPX U279 ( .A(n344), .Z(n340) );
-  INVHDPX U280 ( .A(n343), .Z(n341) );
-  INVHDPX U281 ( .A(n343), .Z(n342) );
-  INVHDPX U282 ( .A(n338), .Z(n333) );
-  INVHDPX U283 ( .A(n338), .Z(n334) );
-  INVHDPX U284 ( .A(n337), .Z(n335) );
-  INVHDPX U285 ( .A(n337), .Z(n336) );
-  INVHDPX U286 ( .A(n356), .Z(n351) );
-  INVHDPX U287 ( .A(n356), .Z(n352) );
-  INVHDPX U288 ( .A(n355), .Z(n353) );
-  INVHDPX U289 ( .A(n355), .Z(n354) );
-  INVHDPX U290 ( .A(n1280), .Z(n362) );
-  INVHDPX U291 ( .A(n1280), .Z(n361) );
-  INVHDPX U292 ( .A(n1210), .Z(n350) );
-  INVHDPX U293 ( .A(n1210), .Z(n349) );
-  INVHDPX U294 ( .A(n315), .Z(n318) );
-  INVHDPX U295 ( .A(n324), .Z(n327) );
-  INVHDPX U296 ( .A(n1200), .Z(n308) );
-  INVHDPX U297 ( .A(n1330), .Z(n300) );
-  INVHDPX U298 ( .A(n315), .Z(n317) );
-  INVHDPX U299 ( .A(n324), .Z(n326) );
-  INVHDPX U300 ( .A(n1200), .Z(n307) );
-  INVHDPX U301 ( .A(n1330), .Z(n299) );
-  INVHDPX U302 ( .A(n315), .Z(n316) );
-  INVHDPX U303 ( .A(n324), .Z(n325) );
-  INVHDPX U304 ( .A(n1200), .Z(n306) );
-  INVHDPX U305 ( .A(n1330), .Z(n298) );
-  INVHDPX U306 ( .A(n1290), .Z(n322) );
-  INVHDPX U307 ( .A(n1300), .Z(n331) );
-  INVHDPX U308 ( .A(n310), .Z(n313) );
-  INVHDPX U309 ( .A(n1320), .Z(n304) );
-  INVHDPX U310 ( .A(n1290), .Z(n321) );
-  INVHDPX U311 ( .A(n1300), .Z(n330) );
-  INVHDPX U312 ( .A(n310), .Z(n312) );
-  INVHDPX U313 ( .A(n1320), .Z(n303) );
-  INVHDPX U314 ( .A(n1290), .Z(n320) );
-  INVHDPX U315 ( .A(n1300), .Z(n329) );
-  INVHDPX U316 ( .A(n310), .Z(n311) );
-  INVHDPX U317 ( .A(n1320), .Z(n302) );
-  INVHDPX U318 ( .A(n1240), .Z(n380) );
-  INVHDPX U319 ( .A(n1240), .Z(n379) );
-  INVHDPX U320 ( .A(n1250), .Z(n374) );
-  INVHDPX U321 ( .A(n1250), .Z(n373) );
-  INVHDPX U322 ( .A(n1270), .Z(n368) );
-  INVHDPX U323 ( .A(n1270), .Z(n367) );
-  INVHDPX U324 ( .A(n1260), .Z(n344) );
-  INVHDPX U325 ( .A(n1260), .Z(n343) );
-  INVHDPX U326 ( .A(n1220), .Z(n338) );
-  INVHDPX U327 ( .A(n1230), .Z(n356) );
-  INVHDPX U328 ( .A(n315), .Z(n319) );
-  INVHDPX U329 ( .A(n289), .Z(n315) );
-  INVHDPX U330 ( .A(n324), .Z(n328) );
-  INVHDPX U331 ( .A(n290), .Z(n324) );
-  INVHDPX U332 ( .A(n1290), .Z(n323) );
-  INVHDPX U333 ( .A(n1300), .Z(n332) );
-  INVHDPX U334 ( .A(n1200), .Z(n309) );
-  INVHDPX U335 ( .A(n1330), .Z(n301) );
-  INVHDPX U336 ( .A(n310), .Z(n314) );
-  INVHDPX U337 ( .A(n288), .Z(n310) );
-  INVHDPX U338 ( .A(n1320), .Z(n305) );
-  AND2HD1X U339 ( .A(n193), .B(n186), .Z(n289) );
-  AND2HD1X U340 ( .A(n195), .B(n186), .Z(n290) );
-  NOR2B1HD1X U341 ( .AN(n194), .B(n185), .Z(n288) );
-  INVHDLX U342 ( .A(n185), .Z(n297) );
-  INVHDPX U343 ( .A(N100), .Z(n296) );
-  NOR2HD1X U344 ( .A(n295), .B(N100), .Z(n192) );
-  NOR2HD1X U345 ( .A(n295), .B(n296), .Z(n193) );
-  AOI22HD1X U346 ( .A(\led_reg[120] ), .B(n305), .C(\led_reg[168] ), .D(n301), 
+        \bit_counter[0] ), .QN(n345) );
+  FFDCRHDLX rgb_counter_reg_3_ ( .D(n31), .RN(n113), .CK(clk), .Q(
+        \rgb_counter[3] ), .QN(n298) );
+  INVHDLX U131 ( .A(n230), .Z(n253) );
+  INVHDLX U132 ( .A(n228), .Z(n249) );
+  INVHDLX U133 ( .A(n229), .Z(n251) );
+  INVHDLX U134 ( .A(n231), .Z(n255) );
+  NOR4B1HD2X U135 ( .AN(n325), .B(\rgb_counter[2] ), .C(\rgb_counter[3] ), .D(
+        \rgb_counter[4] ), .Z(n300) );
+  INVHDPX U136 ( .A(n1200), .Z(n2650) );
+  INVHDPX U137 ( .A(n1200), .Z(n2660) );
+  INVHDPX U138 ( .A(n1210), .Z(n2610) );
+  INVHDPX U139 ( .A(n1210), .Z(n2620) );
+  INVHDPX U140 ( .A(n1220), .Z(n246) );
+  INVHDPX U141 ( .A(n1240), .Z(n242) );
+  INVHDPX U142 ( .A(n249), .Z(n250) );
+  INVHDPX U143 ( .A(n253), .Z(n254) );
+  INVHDPX U144 ( .A(n1240), .Z(n241) );
+  INVHDPX U145 ( .A(n1250), .Z(n248) );
+  INVHDPX U146 ( .A(n1230), .Z(n244) );
+  INVHDPX U147 ( .A(n251), .Z(n252) );
+  INVHDPX U148 ( .A(n255), .Z(n256) );
+  INVHDPX U149 ( .A(n1250), .Z(n247) );
+  INVHDPX U150 ( .A(n1230), .Z(n243) );
+  INVHDPX U151 ( .A(n1220), .Z(n245) );
+  INVHDPX U152 ( .A(n1260), .Z(n271) );
+  INVHDPX U153 ( .A(n1260), .Z(n272) );
+  INVHDPX U154 ( .A(n1270), .Z(n2690) );
+  INVHDPX U155 ( .A(n1270), .Z(n270) );
+  INVHDPX U156 ( .A(n1280), .Z(n2670) );
+  INVHDPX U157 ( .A(n1280), .Z(n2680) );
+  INVHDPX U158 ( .A(n1290), .Z(n2590) );
+  INVHDPX U159 ( .A(n1290), .Z(n2600) );
+  INVHDPX U160 ( .A(n1300), .Z(n2570) );
+  INVHDPX U161 ( .A(n1300), .Z(n2580) );
+  INVHDPX U162 ( .A(n1310), .Z(n2630) );
+  INVHDPX U163 ( .A(n1310), .Z(n2640) );
+  OR3HD1X U164 ( .A(n282), .B(n278), .C(n280), .Z(n1200) );
+  OR3HD1X U165 ( .A(n280), .B(n279), .C(n278), .Z(n1210) );
+  NAND2HD1X U166 ( .A(n1350), .B(N99), .Z(n1220) );
+  NAND2HD1X U167 ( .A(n1320), .B(n239), .Z(n1230) );
+  NAND2HD1X U168 ( .A(n1330), .B(N99), .Z(n1240) );
+  INVHDPX U169 ( .A(n351), .Z(n240) );
+  INVHDPX U170 ( .A(n351), .Z(n239) );
+  INVHDPX U171 ( .A(n351), .Z(n238) );
+  NAND2HD1X U172 ( .A(n1340), .B(n238), .Z(n1250) );
+  OR3HD1X U173 ( .A(n282), .B(led_num[1]), .C(led_num[0]), .Z(n1260) );
+  OR3HD1X U174 ( .A(n282), .B(led_num[1]), .C(n278), .Z(n1270) );
+  OR3HD1X U175 ( .A(n282), .B(led_num[0]), .C(n280), .Z(n1280) );
+  OR3HD1X U176 ( .A(n279), .B(led_num[1]), .C(led_num[0]), .Z(n1290) );
+  OR3HD1X U177 ( .A(n278), .B(led_num[1]), .C(n279), .Z(n1300) );
+  OR3HD1X U178 ( .A(n280), .B(led_num[0]), .C(n279), .Z(n1310) );
+  NAND4HD2X U179 ( .A(n345), .B(n347), .C(n309), .D(n310), .Z(n302) );
+  INVHDPX U180 ( .A(\rgb_counter[2] ), .Z(n277) );
+  INVHDPX U181 ( .A(N100), .Z(n237) );
+  INVHDPX U182 ( .A(N101), .Z(n236) );
+  NOR2HD1X U183 ( .A(n236), .B(N100), .Z(n1320) );
+  NOR2HD1X U184 ( .A(n236), .B(n237), .Z(n1330) );
+  AOI22HD1X U185 ( .A(\led_reg[120] ), .B(n244), .C(\led_reg[168] ), .D(n242), 
+        .Z(n1390) );
+  NOR2HD1X U186 ( .A(N100), .B(N101), .Z(n1340) );
+  NOR2HD1X U187 ( .A(n237), .B(N101), .Z(n1350) );
+  AOI22HD1X U188 ( .A(\led_reg[24] ), .B(n248), .C(\led_reg[72] ), .D(n246), 
+        .Z(n1380) );
+  NOR2B1HD1X U189 ( .AN(n1320), .B(n240), .Z(n229) );
+  NOR2B1HD1X U190 ( .AN(n1330), .B(n239), .Z(n228) );
+  AOI22HD1X U191 ( .A(\led_reg[96] ), .B(n252), .C(\led_reg[144] ), .D(n250), 
+        .Z(n1370) );
+  NOR2B1HD1X U192 ( .AN(n1340), .B(n238), .Z(n231) );
+  NOR2B1HD1X U193 ( .AN(n1350), .B(n239), .Z(n230) );
+  AOI22HD1X U194 ( .A(\led_reg[0] ), .B(n256), .C(\led_reg[48] ), .D(n254), 
+        .Z(n1360) );
+  NAND4HD1X U195 ( .A(n1390), .B(n1380), .C(n1370), .D(n1360), .Z(N142) );
+  AOI22HD1X U196 ( .A(\led_reg[121] ), .B(n244), .C(\led_reg[169] ), .D(n242), 
+        .Z(n143) );
+  AOI22HD1X U197 ( .A(\led_reg[25] ), .B(n248), .C(\led_reg[73] ), .D(n246), 
+        .Z(n1420) );
+  AOI22HD1X U198 ( .A(\led_reg[97] ), .B(n252), .C(\led_reg[145] ), .D(n250), 
+        .Z(n1410) );
+  AOI22HD1X U199 ( .A(\led_reg[1] ), .B(n256), .C(\led_reg[49] ), .D(n254), 
+        .Z(n1400) );
+  NAND4HD1X U200 ( .A(n143), .B(n1420), .C(n1410), .D(n1400), .Z(N141) );
+  AOI22HD1X U201 ( .A(\led_reg[122] ), .B(n244), .C(\led_reg[170] ), .D(n242), 
+        .Z(n147) );
+  AOI22HD1X U202 ( .A(\led_reg[26] ), .B(n248), .C(\led_reg[74] ), .D(n246), 
+        .Z(n146) );
+  AOI22HD1X U203 ( .A(\led_reg[98] ), .B(n252), .C(\led_reg[146] ), .D(n250), 
+        .Z(n145) );
+  AOI22HD1X U204 ( .A(\led_reg[2] ), .B(n256), .C(\led_reg[50] ), .D(n254), 
+        .Z(n144) );
+  NAND4HD1X U205 ( .A(n147), .B(n146), .C(n145), .D(n144), .Z(N140) );
+  AOI22HD1X U206 ( .A(\led_reg[123] ), .B(n244), .C(\led_reg[171] ), .D(n242), 
+        .Z(n1510) );
+  AOI22HD1X U207 ( .A(\led_reg[27] ), .B(n248), .C(\led_reg[75] ), .D(n246), 
+        .Z(n1500) );
+  AOI22HD1X U208 ( .A(\led_reg[99] ), .B(n252), .C(\led_reg[147] ), .D(n250), 
+        .Z(n1490) );
+  AOI22HD1X U209 ( .A(\led_reg[3] ), .B(n256), .C(\led_reg[51] ), .D(n254), 
+        .Z(n1480) );
+  NAND4HD1X U210 ( .A(n1510), .B(n1500), .C(n1490), .D(n1480), .Z(N139) );
+  AOI22HD1X U211 ( .A(\led_reg[124] ), .B(n244), .C(\led_reg[172] ), .D(n242), 
+        .Z(n1550) );
+  AOI22HD1X U212 ( .A(\led_reg[28] ), .B(n248), .C(\led_reg[76] ), .D(n246), 
+        .Z(n1540) );
+  AOI22HD1X U213 ( .A(\led_reg[100] ), .B(n252), .C(\led_reg[148] ), .D(n250), 
+        .Z(n1530) );
+  AOI22HD1X U214 ( .A(\led_reg[4] ), .B(n256), .C(\led_reg[52] ), .D(n254), 
+        .Z(n1520) );
+  NAND4HD1X U215 ( .A(n1550), .B(n1540), .C(n1530), .D(n1520), .Z(N138) );
+  AOI22HD1X U216 ( .A(\led_reg[125] ), .B(n244), .C(\led_reg[173] ), .D(n242), 
+        .Z(n1590) );
+  AOI22HD1X U217 ( .A(\led_reg[29] ), .B(n248), .C(\led_reg[77] ), .D(n246), 
+        .Z(n1580) );
+  AOI22HD1X U218 ( .A(\led_reg[101] ), .B(n252), .C(\led_reg[149] ), .D(n250), 
+        .Z(n1570) );
+  AOI22HD1X U219 ( .A(\led_reg[5] ), .B(n256), .C(\led_reg[53] ), .D(n254), 
+        .Z(n1560) );
+  NAND4HD1X U220 ( .A(n1590), .B(n1580), .C(n1570), .D(n1560), .Z(N137) );
+  AOI22HD1X U221 ( .A(\led_reg[126] ), .B(n244), .C(\led_reg[174] ), .D(n242), 
+        .Z(n163) );
+  AOI22HD1X U222 ( .A(\led_reg[30] ), .B(n248), .C(\led_reg[78] ), .D(n246), 
+        .Z(n162) );
+  AOI22HD1X U223 ( .A(\led_reg[102] ), .B(n252), .C(\led_reg[150] ), .D(n250), 
+        .Z(n161) );
+  AOI22HD1X U224 ( .A(\led_reg[6] ), .B(n256), .C(\led_reg[54] ), .D(n254), 
+        .Z(n160) );
+  NAND4HD1X U225 ( .A(n163), .B(n162), .C(n161), .D(n160), .Z(N136) );
+  AOI22HD1X U226 ( .A(\led_reg[127] ), .B(n244), .C(\led_reg[175] ), .D(n242), 
+        .Z(n167) );
+  AOI22HD1X U227 ( .A(\led_reg[31] ), .B(n248), .C(\led_reg[79] ), .D(n246), 
+        .Z(n166) );
+  AOI22HD1X U228 ( .A(\led_reg[103] ), .B(n252), .C(\led_reg[151] ), .D(n250), 
+        .Z(n165) );
+  AOI22HD1X U229 ( .A(\led_reg[7] ), .B(n256), .C(\led_reg[55] ), .D(n254), 
+        .Z(n164) );
+  NAND4HD1X U230 ( .A(n167), .B(n166), .C(n165), .D(n164), .Z(N135) );
+  AOI22HD1X U231 ( .A(\led_reg[128] ), .B(n244), .C(\led_reg[176] ), .D(n242), 
+        .Z(n171) );
+  AOI22HD1X U232 ( .A(\led_reg[32] ), .B(n248), .C(\led_reg[80] ), .D(n246), 
+        .Z(n170) );
+  AOI22HD1X U233 ( .A(\led_reg[104] ), .B(n252), .C(\led_reg[152] ), .D(n250), 
+        .Z(n169) );
+  AOI22HD1X U234 ( .A(\led_reg[8] ), .B(n256), .C(\led_reg[56] ), .D(n254), 
+        .Z(n168) );
+  NAND4HD1X U235 ( .A(n171), .B(n170), .C(n169), .D(n168), .Z(N134) );
+  AOI22HD1X U236 ( .A(\led_reg[129] ), .B(n244), .C(\led_reg[177] ), .D(n242), 
+        .Z(n175) );
+  AOI22HD1X U237 ( .A(\led_reg[33] ), .B(n248), .C(\led_reg[81] ), .D(n246), 
+        .Z(n174) );
+  AOI22HD1X U238 ( .A(\led_reg[105] ), .B(n252), .C(\led_reg[153] ), .D(n250), 
+        .Z(n173) );
+  AOI22HD1X U239 ( .A(\led_reg[9] ), .B(n256), .C(\led_reg[57] ), .D(n254), 
+        .Z(n172) );
+  NAND4HD1X U240 ( .A(n175), .B(n174), .C(n173), .D(n172), .Z(N133) );
+  AOI22HD1X U241 ( .A(\led_reg[130] ), .B(n244), .C(\led_reg[178] ), .D(n242), 
+        .Z(n179) );
+  AOI22HD1X U242 ( .A(\led_reg[34] ), .B(n248), .C(\led_reg[82] ), .D(n246), 
+        .Z(n178) );
+  AOI22HD1X U243 ( .A(\led_reg[106] ), .B(n252), .C(\led_reg[154] ), .D(n250), 
+        .Z(n177) );
+  AOI22HD1X U244 ( .A(\led_reg[10] ), .B(n256), .C(\led_reg[58] ), .D(n254), 
+        .Z(n176) );
+  NAND4HD1X U245 ( .A(n179), .B(n178), .C(n177), .D(n176), .Z(N132) );
+  AOI22HD1X U246 ( .A(\led_reg[131] ), .B(n243), .C(\led_reg[179] ), .D(n241), 
+        .Z(n183) );
+  AOI22HD1X U247 ( .A(\led_reg[35] ), .B(n247), .C(\led_reg[83] ), .D(n245), 
+        .Z(n182) );
+  AOI22HD1X U248 ( .A(\led_reg[107] ), .B(n229), .C(\led_reg[155] ), .D(n228), 
+        .Z(n181) );
+  AOI22HD1X U249 ( .A(\led_reg[11] ), .B(n231), .C(\led_reg[59] ), .D(n230), 
+        .Z(n180) );
+  NAND4HD1X U250 ( .A(n183), .B(n182), .C(n181), .D(n180), .Z(N131) );
+  AOI22HD1X U251 ( .A(\led_reg[132] ), .B(n243), .C(\led_reg[180] ), .D(n241), 
+        .Z(n187) );
+  AOI22HD1X U252 ( .A(\led_reg[36] ), .B(n247), .C(\led_reg[84] ), .D(n246), 
+        .Z(n186) );
+  AOI22HD1X U253 ( .A(\led_reg[108] ), .B(n252), .C(\led_reg[156] ), .D(n250), 
+        .Z(n185) );
+  AOI22HD1X U254 ( .A(\led_reg[12] ), .B(n256), .C(\led_reg[60] ), .D(n254), 
+        .Z(n184) );
+  NAND4HD1X U255 ( .A(n187), .B(n186), .C(n185), .D(n184), .Z(N130) );
+  AOI22HD1X U256 ( .A(\led_reg[133] ), .B(n243), .C(\led_reg[181] ), .D(n241), 
+        .Z(n191) );
+  AOI22HD1X U257 ( .A(\led_reg[37] ), .B(n247), .C(\led_reg[85] ), .D(n245), 
+        .Z(n190) );
+  AOI22HD1X U258 ( .A(\led_reg[109] ), .B(n252), .C(\led_reg[157] ), .D(n250), 
+        .Z(n189) );
+  AOI22HD1X U259 ( .A(\led_reg[13] ), .B(n256), .C(\led_reg[61] ), .D(n254), 
+        .Z(n188) );
+  NAND4HD1X U260 ( .A(n191), .B(n190), .C(n189), .D(n188), .Z(N129) );
+  AOI22HD1X U261 ( .A(\led_reg[134] ), .B(n243), .C(\led_reg[182] ), .D(n241), 
+        .Z(n195) );
+  AOI22HD1X U262 ( .A(\led_reg[38] ), .B(n247), .C(\led_reg[86] ), .D(n245), 
+        .Z(n194) );
+  AOI22HD1X U263 ( .A(\led_reg[110] ), .B(n252), .C(\led_reg[158] ), .D(n250), 
+        .Z(n193) );
+  AOI22HD1X U264 ( .A(\led_reg[14] ), .B(n256), .C(\led_reg[62] ), .D(n254), 
+        .Z(n192) );
+  NAND4HD1X U265 ( .A(n195), .B(n194), .C(n193), .D(n192), .Z(N128) );
+  AOI22HD1X U266 ( .A(\led_reg[135] ), .B(n243), .C(\led_reg[183] ), .D(n241), 
         .Z(n199) );
-  NOR2HD1X U347 ( .A(N100), .B(N101), .Z(n194) );
-  NOR2HD1X U348 ( .A(n296), .B(N101), .Z(n195) );
-  AOI22HD1X U349 ( .A(\led_reg[24] ), .B(n314), .C(\led_reg[72] ), .D(n309), 
+  AOI22HD1X U267 ( .A(\led_reg[39] ), .B(n247), .C(\led_reg[87] ), .D(n245), 
         .Z(n198) );
-  AOI22HD1X U350 ( .A(\led_reg[96] ), .B(n323), .C(\led_reg[144] ), .D(n319), 
+  AOI22HD1X U268 ( .A(\led_reg[111] ), .B(n229), .C(\led_reg[159] ), .D(n250), 
         .Z(n197) );
-  AOI22HD1X U351 ( .A(\led_reg[0] ), .B(n332), .C(\led_reg[48] ), .D(n328), 
+  AOI22HD1X U269 ( .A(\led_reg[15] ), .B(n231), .C(\led_reg[63] ), .D(n254), 
         .Z(n196) );
-  NAND4HD1X U352 ( .A(n199), .B(n198), .C(n197), .D(n196), .Z(N142) );
-  AOI22HD1X U353 ( .A(\led_reg[121] ), .B(n305), .C(\led_reg[169] ), .D(n301), 
+  NAND4HD1X U270 ( .A(n199), .B(n198), .C(n197), .D(n196), .Z(N127) );
+  AOI22HD1X U271 ( .A(\led_reg[136] ), .B(n243), .C(\led_reg[184] ), .D(n241), 
         .Z(n203) );
-  AOI22HD1X U354 ( .A(\led_reg[25] ), .B(n314), .C(\led_reg[73] ), .D(n309), 
+  AOI22HD1X U272 ( .A(\led_reg[40] ), .B(n247), .C(\led_reg[88] ), .D(n245), 
         .Z(n202) );
-  AOI22HD1X U355 ( .A(\led_reg[97] ), .B(n323), .C(\led_reg[145] ), .D(n319), 
+  AOI22HD1X U273 ( .A(\led_reg[112] ), .B(n229), .C(\led_reg[160] ), .D(n228), 
         .Z(n201) );
-  AOI22HD1X U356 ( .A(\led_reg[1] ), .B(n332), .C(\led_reg[49] ), .D(n328), 
+  AOI22HD1X U274 ( .A(\led_reg[16] ), .B(n231), .C(\led_reg[64] ), .D(n230), 
         .Z(n200) );
-  NAND4HD1X U357 ( .A(n203), .B(n202), .C(n201), .D(n200), .Z(N141) );
-  AOI22HD1X U358 ( .A(\led_reg[122] ), .B(n305), .C(\led_reg[170] ), .D(n301), 
+  NAND4HD1X U275 ( .A(n203), .B(n202), .C(n201), .D(n200), .Z(N126) );
+  AOI22HD1X U276 ( .A(\led_reg[137] ), .B(n243), .C(\led_reg[185] ), .D(n241), 
         .Z(n207) );
-  AOI22HD1X U359 ( .A(\led_reg[26] ), .B(n314), .C(\led_reg[74] ), .D(n309), 
+  AOI22HD1X U277 ( .A(\led_reg[41] ), .B(n247), .C(\led_reg[89] ), .D(n245), 
         .Z(n206) );
-  AOI22HD1X U360 ( .A(\led_reg[98] ), .B(n323), .C(\led_reg[146] ), .D(n319), 
+  AOI22HD1X U278 ( .A(\led_reg[113] ), .B(n229), .C(\led_reg[161] ), .D(n228), 
         .Z(n205) );
-  AOI22HD1X U361 ( .A(\led_reg[2] ), .B(n332), .C(\led_reg[50] ), .D(n328), 
+  AOI22HD1X U279 ( .A(\led_reg[17] ), .B(n231), .C(\led_reg[65] ), .D(n230), 
         .Z(n204) );
-  NAND4HD1X U362 ( .A(n207), .B(n206), .C(n205), .D(n204), .Z(N140) );
-  AOI22HD1X U363 ( .A(\led_reg[123] ), .B(n305), .C(\led_reg[171] ), .D(n301), 
+  NAND4HD1X U280 ( .A(n207), .B(n206), .C(n205), .D(n204), .Z(N125) );
+  AOI22HD1X U281 ( .A(\led_reg[138] ), .B(n243), .C(\led_reg[186] ), .D(n241), 
         .Z(n211) );
-  AOI22HD1X U364 ( .A(\led_reg[27] ), .B(n314), .C(\led_reg[75] ), .D(n309), 
+  AOI22HD1X U282 ( .A(\led_reg[42] ), .B(n247), .C(\led_reg[90] ), .D(n245), 
         .Z(n210) );
-  AOI22HD1X U365 ( .A(\led_reg[99] ), .B(n323), .C(\led_reg[147] ), .D(n319), 
+  AOI22HD1X U283 ( .A(\led_reg[114] ), .B(n229), .C(\led_reg[162] ), .D(n228), 
         .Z(n209) );
-  AOI22HD1X U366 ( .A(\led_reg[3] ), .B(n332), .C(\led_reg[51] ), .D(n328), 
+  AOI22HD1X U284 ( .A(\led_reg[18] ), .B(n231), .C(\led_reg[66] ), .D(n230), 
         .Z(n208) );
-  NAND4HD1X U367 ( .A(n211), .B(n210), .C(n209), .D(n208), .Z(N139) );
-  AOI22HD1X U368 ( .A(\led_reg[124] ), .B(n305), .C(\led_reg[172] ), .D(n301), 
+  NAND4HD1X U285 ( .A(n211), .B(n210), .C(n209), .D(n208), .Z(N124) );
+  AOI22HD1X U286 ( .A(\led_reg[139] ), .B(n243), .C(\led_reg[187] ), .D(n241), 
         .Z(n2150) );
-  AOI22HD1X U369 ( .A(\led_reg[28] ), .B(n314), .C(\led_reg[76] ), .D(n309), 
+  AOI22HD1X U287 ( .A(\led_reg[43] ), .B(n247), .C(\led_reg[91] ), .D(n245), 
         .Z(n214) );
-  AOI22HD1X U370 ( .A(\led_reg[100] ), .B(n323), .C(\led_reg[148] ), .D(n319), 
+  AOI22HD1X U288 ( .A(\led_reg[115] ), .B(n229), .C(\led_reg[163] ), .D(n228), 
         .Z(n213) );
-  AOI22HD1X U371 ( .A(\led_reg[4] ), .B(n332), .C(\led_reg[52] ), .D(n328), 
+  AOI22HD1X U289 ( .A(\led_reg[19] ), .B(n231), .C(\led_reg[67] ), .D(n230), 
         .Z(n212) );
-  NAND4HD1X U372 ( .A(n2150), .B(n214), .C(n213), .D(n212), .Z(N138) );
-  NAND4HD1X U373 ( .A(n2190), .B(n2180), .C(n2170), .D(n2160), .Z(N137) );
-  AOI22HD1X U374 ( .A(\led_reg[126] ), .B(n304), .C(\led_reg[174] ), .D(n300), 
+  NAND4HD1X U290 ( .A(n2150), .B(n214), .C(n213), .D(n212), .Z(N123) );
+  AOI22HD1X U291 ( .A(\led_reg[140] ), .B(n243), .C(\led_reg[188] ), .D(n241), 
+        .Z(n2190) );
+  AOI22HD1X U292 ( .A(\led_reg[44] ), .B(n247), .C(\led_reg[92] ), .D(n245), 
+        .Z(n2180) );
+  AOI22HD1X U293 ( .A(\led_reg[116] ), .B(n229), .C(\led_reg[164] ), .D(n228), 
+        .Z(n2170) );
+  AOI22HD1X U294 ( .A(\led_reg[20] ), .B(n231), .C(\led_reg[68] ), .D(n230), 
+        .Z(n2160) );
+  NAND4HD1X U295 ( .A(n2190), .B(n2180), .C(n2170), .D(n2160), .Z(N122) );
+  AOI22HD1X U296 ( .A(\led_reg[141] ), .B(n243), .C(\led_reg[189] ), .D(n241), 
         .Z(n223) );
-  AOI22HD1X U375 ( .A(\led_reg[30] ), .B(n313), .C(\led_reg[78] ), .D(n308), 
+  AOI22HD1X U297 ( .A(\led_reg[45] ), .B(n247), .C(\led_reg[93] ), .D(n245), 
         .Z(n222) );
-  AOI22HD1X U376 ( .A(\led_reg[102] ), .B(n322), .C(\led_reg[150] ), .D(n318), 
+  AOI22HD1X U298 ( .A(\led_reg[117] ), .B(n252), .C(\led_reg[165] ), .D(n228), 
         .Z(n221) );
-  AOI22HD1X U377 ( .A(\led_reg[6] ), .B(n331), .C(\led_reg[54] ), .D(n327), 
+  AOI22HD1X U299 ( .A(\led_reg[21] ), .B(n256), .C(\led_reg[69] ), .D(n230), 
         .Z(n220) );
-  NAND4HD1X U378 ( .A(n223), .B(n222), .C(n221), .D(n220), .Z(N136) );
-  AOI22HD1X U379 ( .A(\led_reg[127] ), .B(n304), .C(\led_reg[175] ), .D(n300), 
+  NAND4HD1X U300 ( .A(n223), .B(n222), .C(n221), .D(n220), .Z(N121) );
+  AOI22HD1X U301 ( .A(\led_reg[142] ), .B(n243), .C(\led_reg[190] ), .D(n241), 
         .Z(n227) );
-  AOI22HD1X U380 ( .A(\led_reg[31] ), .B(n313), .C(\led_reg[79] ), .D(n308), 
+  AOI22HD1X U302 ( .A(\led_reg[46] ), .B(n247), .C(\led_reg[94] ), .D(n245), 
         .Z(n226) );
-  AOI22HD1X U381 ( .A(\led_reg[103] ), .B(n322), .C(\led_reg[151] ), .D(n318), 
+  AOI22HD1X U303 ( .A(\led_reg[118] ), .B(n252), .C(\led_reg[166] ), .D(n250), 
         .Z(n225) );
-  AOI22HD1X U382 ( .A(\led_reg[7] ), .B(n331), .C(\led_reg[55] ), .D(n327), 
+  AOI22HD1X U304 ( .A(\led_reg[22] ), .B(n256), .C(\led_reg[70] ), .D(n254), 
         .Z(n224) );
-  NAND4HD1X U383 ( .A(n227), .B(n226), .C(n225), .D(n224), .Z(N135) );
-  AOI22HD1X U384 ( .A(\led_reg[128] ), .B(n304), .C(\led_reg[176] ), .D(n300), 
-        .Z(n231) );
-  AOI22HD1X U385 ( .A(\led_reg[32] ), .B(n313), .C(\led_reg[80] ), .D(n308), 
-        .Z(n230) );
-  AOI22HD1X U386 ( .A(\led_reg[104] ), .B(n322), .C(\led_reg[152] ), .D(n318), 
-        .Z(n229) );
-  AOI22HD1X U387 ( .A(\led_reg[8] ), .B(n331), .C(\led_reg[56] ), .D(n327), 
-        .Z(n228) );
-  NAND4HD1X U388 ( .A(n231), .B(n230), .C(n229), .D(n228), .Z(N134) );
-  AOI22HD1X U389 ( .A(\led_reg[129] ), .B(n304), .C(\led_reg[177] ), .D(n300), 
+  NAND4HD1X U305 ( .A(n227), .B(n226), .C(n225), .D(n224), .Z(N120) );
+  AOI22HD1X U306 ( .A(\led_reg[143] ), .B(n244), .C(\led_reg[191] ), .D(n242), 
         .Z(n235) );
-  AOI22HD1X U390 ( .A(\led_reg[33] ), .B(n313), .C(\led_reg[81] ), .D(n308), 
+  AOI22HD1X U307 ( .A(\led_reg[47] ), .B(n248), .C(\led_reg[95] ), .D(n245), 
         .Z(n234) );
-  AOI22HD1X U391 ( .A(\led_reg[105] ), .B(n322), .C(\led_reg[153] ), .D(n318), 
+  AOI22HD1X U308 ( .A(\led_reg[119] ), .B(n252), .C(\led_reg[167] ), .D(n250), 
         .Z(n233) );
-  AOI22HD1X U392 ( .A(\led_reg[9] ), .B(n331), .C(\led_reg[57] ), .D(n327), 
+  AOI22HD1X U309 ( .A(\led_reg[23] ), .B(n256), .C(\led_reg[71] ), .D(n254), 
         .Z(n232) );
-  NAND4HD1X U393 ( .A(n235), .B(n234), .C(n233), .D(n232), .Z(N133) );
-  AOI22HD1X U394 ( .A(\led_reg[130] ), .B(n304), .C(\led_reg[178] ), .D(n300), 
-        .Z(n239) );
-  AOI22HD1X U395 ( .A(\led_reg[34] ), .B(n313), .C(\led_reg[82] ), .D(n308), 
-        .Z(n238) );
-  AOI22HD1X U396 ( .A(\led_reg[106] ), .B(n322), .C(\led_reg[154] ), .D(n318), 
-        .Z(n237) );
-  AOI22HD1X U397 ( .A(\led_reg[10] ), .B(n331), .C(\led_reg[58] ), .D(n327), 
-        .Z(n236) );
-  NAND4HD1X U398 ( .A(n239), .B(n238), .C(n237), .D(n236), .Z(N132) );
-  NAND4HD1X U399 ( .A(n243), .B(n242), .C(n241), .D(n240), .Z(N131) );
-  AOI22HD1X U400 ( .A(\led_reg[132] ), .B(n303), .C(\led_reg[180] ), .D(n299), 
-        .Z(n247) );
-  AOI22HD1X U401 ( .A(\led_reg[36] ), .B(n312), .C(\led_reg[84] ), .D(n307), 
-        .Z(n246) );
-  AOI22HD1X U402 ( .A(\led_reg[108] ), .B(n321), .C(\led_reg[156] ), .D(n317), 
-        .Z(n245) );
-  AOI22HD1X U403 ( .A(\led_reg[12] ), .B(n330), .C(\led_reg[60] ), .D(n326), 
-        .Z(n244) );
-  NAND4HD1X U404 ( .A(n247), .B(n246), .C(n245), .D(n244), .Z(N130) );
-  AOI22HD1X U405 ( .A(\led_reg[133] ), .B(n303), .C(\led_reg[181] ), .D(n299), 
-        .Z(n251) );
-  AOI22HD1X U406 ( .A(\led_reg[37] ), .B(n312), .C(\led_reg[85] ), .D(n307), 
-        .Z(n250) );
-  AOI22HD1X U407 ( .A(\led_reg[109] ), .B(n321), .C(\led_reg[157] ), .D(n317), 
-        .Z(n249) );
-  AOI22HD1X U408 ( .A(\led_reg[13] ), .B(n330), .C(\led_reg[61] ), .D(n326), 
-        .Z(n248) );
-  NAND4HD1X U409 ( .A(n251), .B(n250), .C(n249), .D(n248), .Z(N129) );
-  AOI22HD1X U410 ( .A(\led_reg[134] ), .B(n303), .C(\led_reg[182] ), .D(n299), 
-        .Z(n255) );
-  AOI22HD1X U411 ( .A(\led_reg[38] ), .B(n312), .C(\led_reg[86] ), .D(n307), 
-        .Z(n254) );
-  AOI22HD1X U412 ( .A(\led_reg[110] ), .B(n321), .C(\led_reg[158] ), .D(n317), 
-        .Z(n253) );
-  AOI22HD1X U413 ( .A(\led_reg[14] ), .B(n330), .C(\led_reg[62] ), .D(n326), 
-        .Z(n252) );
-  NAND4HD1X U414 ( .A(n255), .B(n254), .C(n253), .D(n252), .Z(N128) );
-  AOI22HD1X U415 ( .A(\led_reg[135] ), .B(n303), .C(\led_reg[183] ), .D(n299), 
-        .Z(n2590) );
-  AOI22HD1X U416 ( .A(\led_reg[39] ), .B(n312), .C(\led_reg[87] ), .D(n307), 
-        .Z(n2580) );
-  AOI22HD1X U417 ( .A(\led_reg[111] ), .B(n321), .C(\led_reg[159] ), .D(n317), 
-        .Z(n2570) );
-  AOI22HD1X U418 ( .A(\led_reg[15] ), .B(n330), .C(\led_reg[63] ), .D(n326), 
-        .Z(n256) );
-  NAND4HD1X U419 ( .A(n2590), .B(n2580), .C(n2570), .D(n256), .Z(N127) );
-  AOI22HD1X U420 ( .A(\led_reg[136] ), .B(n303), .C(\led_reg[184] ), .D(n299), 
-        .Z(n2630) );
-  AOI22HD1X U421 ( .A(\led_reg[40] ), .B(n312), .C(\led_reg[88] ), .D(n307), 
-        .Z(n2620) );
-  AOI22HD1X U422 ( .A(\led_reg[112] ), .B(n321), .C(\led_reg[160] ), .D(n317), 
-        .Z(n2610) );
-  AOI22HD1X U423 ( .A(\led_reg[16] ), .B(n330), .C(\led_reg[64] ), .D(n326), 
-        .Z(n2600) );
-  NAND4HD1X U424 ( .A(n2630), .B(n2620), .C(n2610), .D(n2600), .Z(N126) );
-  NAND4HD1X U425 ( .A(n2670), .B(n2660), .C(n2650), .D(n2640), .Z(N125) );
-  AOI22HD1X U426 ( .A(\led_reg[138] ), .B(n302), .C(\led_reg[186] ), .D(n298), 
-        .Z(n271) );
-  AOI22HD1X U427 ( .A(\led_reg[42] ), .B(n311), .C(\led_reg[90] ), .D(n306), 
-        .Z(n270) );
-  AOI22HD1X U428 ( .A(\led_reg[114] ), .B(n320), .C(\led_reg[162] ), .D(n316), 
-        .Z(n2690) );
-  AOI22HD1X U429 ( .A(\led_reg[18] ), .B(n329), .C(\led_reg[66] ), .D(n325), 
-        .Z(n2680) );
-  NAND4HD1X U430 ( .A(n271), .B(n270), .C(n2690), .D(n2680), .Z(N124) );
-  AOI22HD1X U431 ( .A(\led_reg[139] ), .B(n302), .C(\led_reg[187] ), .D(n298), 
-        .Z(n275) );
-  AOI22HD1X U432 ( .A(\led_reg[43] ), .B(n311), .C(\led_reg[91] ), .D(n306), 
-        .Z(n274) );
-  AOI22HD1X U433 ( .A(\led_reg[115] ), .B(n320), .C(\led_reg[163] ), .D(n316), 
-        .Z(n273) );
-  AOI22HD1X U434 ( .A(\led_reg[19] ), .B(n329), .C(\led_reg[67] ), .D(n325), 
-        .Z(n272) );
-  NAND4HD1X U435 ( .A(n275), .B(n274), .C(n273), .D(n272), .Z(N123) );
-  AOI22HD1X U436 ( .A(\led_reg[140] ), .B(n302), .C(\led_reg[188] ), .D(n298), 
-        .Z(n279) );
-  AOI22HD1X U437 ( .A(\led_reg[44] ), .B(n311), .C(\led_reg[92] ), .D(n306), 
-        .Z(n278) );
-  AOI22HD1X U438 ( .A(\led_reg[116] ), .B(n320), .C(\led_reg[164] ), .D(n316), 
-        .Z(n277) );
-  AOI22HD1X U439 ( .A(\led_reg[20] ), .B(n329), .C(\led_reg[68] ), .D(n325), 
-        .Z(n276) );
-  NAND4HD1X U440 ( .A(n279), .B(n278), .C(n277), .D(n276), .Z(N122) );
-  AOI22HD1X U441 ( .A(\led_reg[141] ), .B(n302), .C(\led_reg[189] ), .D(n298), 
-        .Z(n283) );
-  AOI22HD1X U442 ( .A(\led_reg[45] ), .B(n311), .C(\led_reg[93] ), .D(n306), 
-        .Z(n282) );
-  AOI22HD1X U443 ( .A(\led_reg[117] ), .B(n320), .C(\led_reg[165] ), .D(n316), 
-        .Z(n281) );
-  AOI22HD1X U444 ( .A(\led_reg[21] ), .B(n329), .C(\led_reg[69] ), .D(n325), 
-        .Z(n280) );
-  NAND4HD1X U445 ( .A(n283), .B(n282), .C(n281), .D(n280), .Z(N121) );
-  AOI22HD1X U446 ( .A(\led_reg[142] ), .B(n302), .C(\led_reg[190] ), .D(n298), 
-        .Z(n287) );
-  AOI22HD1X U447 ( .A(\led_reg[46] ), .B(n311), .C(\led_reg[94] ), .D(n306), 
-        .Z(n286) );
-  AOI22HD1X U448 ( .A(\led_reg[118] ), .B(n320), .C(\led_reg[166] ), .D(n316), 
-        .Z(n285) );
-  AOI22HD1X U449 ( .A(\led_reg[22] ), .B(n329), .C(\led_reg[70] ), .D(n325), 
-        .Z(n284) );
-  NAND4HD1X U450 ( .A(n287), .B(n286), .C(n285), .D(n284), .Z(N120) );
-  NAND4HD1X U451 ( .A(n294), .B(n293), .C(n292), .D(n291), .Z(N119) );
-  INVHD1X U452 ( .A(\rgb_counter[0] ), .Z(N215) );
-  NOR2HD1X U453 ( .A(\rgb_counter[1] ), .B(n188), .Z(n382) );
-  INVHD1X U454 ( .A(n381), .Z(N216) );
-  NAND2HD1X U455 ( .A(n382), .B(n385), .Z(n383) );
-  OAI21HD1X U456 ( .A(n382), .B(n385), .C(n383), .Z(N217) );
-  XNOR2HD1X U457 ( .A(\rgb_counter[3] ), .B(n383), .Z(N218) );
-  NOR2HD1X U458 ( .A(\rgb_counter[3] ), .B(n383), .Z(n384) );
-  XOR2HD1X U459 ( .A(\rgb_counter[4] ), .B(n384), .Z(N219) );
-  NAND2HD1X U460 ( .A(led_num[2]), .B(n389), .Z(n387) );
-  INVHD1X U461 ( .A(led_num[1]), .Z(n388) );
-  INVHD1X U462 ( .A(led_num[0]), .Z(n386) );
-  NAND2B1HD1X U463 ( .AN(led_num[2]), .B(n389), .Z(n390) );
-  AND3HD1X U464 ( .A(n391), .B(write), .C(n392), .Z(n389) );
-  NOR3HD1X U465 ( .A(led_num[5]), .B(led_num[7]), .C(led_num[6]), .Z(n392) );
-  NOR2HD1X U466 ( .A(led_num[4]), .B(led_num[3]), .Z(n391) );
-  NAND2HD1X U467 ( .A(n393), .B(n394), .Z(n1190) );
-  OAI21HD1X U468 ( .A(n396), .B(n295), .C(n394), .Z(n118) );
-  NOR2HD1X U469 ( .A(n395), .B(n397), .Z(n396) );
-  NAND2HD1X U470 ( .A(n401), .B(n402), .Z(n116) );
-  NAND2HD1X U471 ( .A(n404), .B(n402), .Z(n115) );
-  NAND2HD1X U472 ( .A(n405), .B(n402), .Z(n114) );
-  NAND2HD1X U473 ( .A(n409), .B(n402), .Z(n112) );
-  MUXI2HD1X U474 ( .A(\rgb_counter[4] ), .B(N219), .S0(n403), .Z(n409) );
-  OAI211HD1X U475 ( .A(n395), .B(n397), .C(n411), .D(n394), .Z(n111) );
-  OAI21HD1X U476 ( .A(state_0_), .B(n412), .C(n413), .Z(n394) );
-  INVHD1X U477 ( .A(n395), .Z(n413) );
-  AND2HD1X U478 ( .A(N158), .B(n190), .Z(N268) );
-  AND2HD1X U479 ( .A(N156), .B(n190), .Z(N266) );
-  OAI21B2HD1X U480 ( .AN(N151), .BN(n414), .C(n415), .Z(N261) );
-  OAI21B2HD1X U481 ( .AN(N150), .BN(n414), .C(n415), .Z(N260) );
-  AND2HD1X U482 ( .A(N149), .B(n190), .Z(N259) );
-  OAI21B2HD1X U483 ( .AN(N148), .BN(n414), .C(n415), .Z(N258) );
-  INVHD1X U484 ( .A(n416), .Z(n415) );
-  NOR2HD1X U485 ( .A(n397), .B(N101), .Z(n412) );
-  OR2HD1X U486 ( .A(N100), .B(N99), .Z(n397) );
-  NAND2HD1X U487 ( .A(n398), .B(n399), .Z(n414) );
-  INVHD1X U488 ( .A(n189), .Z(n398) );
-  AOI31HD1X U489 ( .A(n417), .B(n419), .C(n455), .D(n420), .Z(N257) );
-  OAI31HD1X U490 ( .A(n421), .B(n422), .C(n423), .D(n399), .Z(n420) );
-  MUXI2HD1X U491 ( .A(n424), .B(n425), .S0(\rgb_counter[4] ), .Z(n423) );
-  MUXI2HD1X U492 ( .A(n426), .B(n427), .S0(\rgb_counter[2] ), .Z(n425) );
-  NAND2HD1X U493 ( .A(n428), .B(n429), .Z(n427) );
-  NAND2HD1X U494 ( .A(n434), .B(n435), .Z(n426) );
-  NAND2HD1X U495 ( .A(n436), .B(n406), .Z(n424) );
-  MUXI2HD1X U496 ( .A(n437), .B(n438), .S0(\rgb_counter[2] ), .Z(n436) );
-  AOI221HD1X U497 ( .A(\led_color[6] ), .B(n432), .C(\led_color[4] ), .D(n433), 
-        .E(n439), .Z(n438) );
-  INVHD1X U498 ( .A(n440), .Z(n439) );
-  OAI21HD1X U499 ( .A(n441), .B(n406), .C(n442), .Z(n421) );
-  AND2HD1X U500 ( .A(n456), .B(n457), .Z(n418) );
-  MUXI2HD1X U501 ( .A(n443), .B(n444), .S0(\rgb_counter[2] ), .Z(n441) );
-  NAND2HD1X U502 ( .A(n445), .B(n446), .Z(n444) );
-  NAND2HD1X U503 ( .A(n447), .B(n448), .Z(n443) );
-  INVHD1X U504 ( .A(n450), .Z(n419) );
-  AOI21HD1X U505 ( .A(n457), .B(n453), .C(n456), .Z(n450) );
-  INVHD1X U506 ( .A(n422), .Z(n417) );
-  NAND4HD1X U507 ( .A(n454), .B(n458), .C(n451), .D(n452), .Z(n422) );
-  NOR4HD1X U508 ( .A(\bit_counter[9] ), .B(\bit_counter[7] ), .C(
-        \bit_counter[6] ), .D(\bit_counter[5] ), .Z(n452) );
-  NOR2HD1X U509 ( .A(\bit_counter[4] ), .B(\bit_counter[11] ), .Z(n451) );
+  NAND4HD1X U310 ( .A(n235), .B(n234), .C(n233), .D(n232), .Z(N119) );
+  INVHD1X U311 ( .A(\rgb_counter[0] ), .Z(N215) );
+  NOR2HD1X U312 ( .A(\rgb_counter[1] ), .B(\rgb_counter[0] ), .Z(n274) );
+  AOI21HD1X U313 ( .A(\rgb_counter[0] ), .B(\rgb_counter[1] ), .C(n274), .Z(
+        n273) );
+  INVHD1X U314 ( .A(n273), .Z(N216) );
+  NAND2HD1X U315 ( .A(n274), .B(n277), .Z(n275) );
+  OAI21HD1X U316 ( .A(n274), .B(n277), .C(n275), .Z(N217) );
+  XNOR2HD1X U317 ( .A(\rgb_counter[3] ), .B(n275), .Z(N218) );
+  NOR2HD1X U318 ( .A(\rgb_counter[3] ), .B(n275), .Z(n276) );
+  XOR2HD1X U319 ( .A(\rgb_counter[4] ), .B(n276), .Z(N219) );
+  NAND2HD1X U320 ( .A(led_num[2]), .B(n281), .Z(n279) );
+  INVHD1X U321 ( .A(led_num[1]), .Z(n280) );
+  INVHD1X U322 ( .A(led_num[0]), .Z(n278) );
+  NAND2B1HD1X U323 ( .AN(led_num[2]), .B(n281), .Z(n282) );
+  AND3HD1X U324 ( .A(n283), .B(write), .C(n284), .Z(n281) );
+  NOR3HD1X U325 ( .A(led_num[5]), .B(led_num[7]), .C(led_num[6]), .Z(n284) );
+  NOR2HD1X U326 ( .A(led_num[4]), .B(led_num[3]), .Z(n283) );
+  NAND2HD1X U327 ( .A(n285), .B(n286), .Z(n1190) );
+  XNOR2HD1X U328 ( .A(n351), .B(n287), .Z(n285) );
+  INVHD1X U329 ( .A(N99), .Z(n351) );
+  OAI21HD1X U330 ( .A(n288), .B(n236), .C(n286), .Z(n118) );
+  NOR2HD1X U331 ( .A(n287), .B(n289), .Z(n288) );
+  OAI21HD1X U332 ( .A(n290), .B(n291), .C(n292), .Z(n117) );
+  NAND2HD1X U333 ( .A(n293), .B(n294), .Z(n116) );
+  MUXI2HD1X U334 ( .A(\rgb_counter[1] ), .B(N216), .S0(n295), .Z(n293) );
+  NAND2HD1X U335 ( .A(n296), .B(n294), .Z(n115) );
+  MUXI2HD1X U336 ( .A(\rgb_counter[0] ), .B(N215), .S0(n295), .Z(n296) );
+  NAND2HD1X U337 ( .A(n297), .B(n294), .Z(n114) );
+  MUXI2HD1X U338 ( .A(\rgb_counter[2] ), .B(N217), .S0(n295), .Z(n297) );
+  MUXI2HD1X U339 ( .A(n298), .B(n299), .S0(n295), .Z(n113) );
+  NAND3B1HD1X U340 ( .AN(n300), .B(n291), .C(N218), .Z(n299) );
+  NAND2HD1X U341 ( .A(n301), .B(n294), .Z(n112) );
+  OAI21HD1X U342 ( .A(state_0_), .B(n300), .C(n295), .Z(n294) );
+  MUXI2HD1X U343 ( .A(\rgb_counter[4] ), .B(N219), .S0(n295), .Z(n301) );
+  NAND2HD1X U344 ( .A(n291), .B(n302), .Z(n295) );
+  OAI211HD1X U345 ( .A(n287), .B(n289), .C(n303), .D(n286), .Z(n111) );
+  OAI21HD1X U346 ( .A(state_0_), .B(n304), .C(n305), .Z(n286) );
+  INVHD1X U347 ( .A(n287), .Z(n305) );
+  OAI21HD1X U348 ( .A(n287), .B(N99), .C(N100), .Z(n303) );
+  AOI21HD1X U349 ( .A(n290), .B(n300), .C(state_0_), .Z(n287) );
+  OAI21B2HD1X U350 ( .AN(N159), .BN(n302), .C(n292), .Z(N269) );
+  AND2HD1X U351 ( .A(N158), .B(n302), .Z(N268) );
+  OAI21B2HD1X U352 ( .AN(N157), .BN(n302), .C(n292), .Z(N267) );
+  AND2HD1X U353 ( .A(N156), .B(n302), .Z(N266) );
+  OAI21B2HD1X U354 ( .AN(N155), .BN(n302), .C(n292), .Z(N265) );
+  OAI21B2HD1X U355 ( .AN(N154), .BN(n302), .C(n292), .Z(N264) );
+  OAI21B2HD1X U356 ( .AN(N153), .BN(n302), .C(n292), .Z(N263) );
+  OAI21B2HD1X U357 ( .AN(N152), .BN(n302), .C(n292), .Z(N262) );
+  NAND3B1HD1X U358 ( .AN(n306), .B(n300), .C(n304), .Z(n292) );
+  OAI21B2HD1X U359 ( .AN(N151), .BN(n306), .C(n307), .Z(N261) );
+  OAI21B2HD1X U360 ( .AN(N150), .BN(n306), .C(n307), .Z(N260) );
+  AND2HD1X U361 ( .A(N149), .B(n302), .Z(N259) );
+  OAI21B2HD1X U362 ( .AN(N148), .BN(n306), .C(n307), .Z(N258) );
+  INVHD1X U363 ( .A(n308), .Z(n307) );
+  AOI31HD1X U364 ( .A(n304), .B(n291), .C(n300), .D(n302), .Z(n308) );
+  NOR2HD1X U365 ( .A(n289), .B(N101), .Z(n304) );
+  OR2HD1X U366 ( .A(N100), .B(N99), .Z(n289) );
+  NAND2HD1X U367 ( .A(n290), .B(n291), .Z(n306) );
+  INVHD1X U368 ( .A(n302), .Z(n290) );
+  AOI31HD1X U369 ( .A(n309), .B(n311), .C(n347), .D(n312), .Z(N257) );
+  OAI31HD1X U370 ( .A(n313), .B(n314), .C(n315), .D(n291), .Z(n312) );
+  INVHD1X U371 ( .A(state_0_), .Z(n291) );
+  MUXI2HD1X U372 ( .A(n316), .B(n317), .S0(\rgb_counter[4] ), .Z(n315) );
+  MUXI2HD1X U373 ( .A(n318), .B(n319), .S0(\rgb_counter[2] ), .Z(n317) );
+  NAND2HD1X U374 ( .A(n320), .B(n321), .Z(n319) );
+  AOI22HD1X U375 ( .A(\led_color[21] ), .B(n322), .C(\led_color[23] ), .D(n323), .Z(n321) );
+  AOI22HD1X U376 ( .A(\led_color[22] ), .B(n324), .C(\led_color[20] ), .D(n325), .Z(n320) );
+  NAND2HD1X U377 ( .A(n326), .B(n327), .Z(n318) );
+  AOI22HD1X U378 ( .A(\led_color[17] ), .B(n322), .C(\led_color[19] ), .D(n323), .Z(n327) );
+  AOI22HD1X U379 ( .A(\led_color[18] ), .B(n324), .C(\led_color[16] ), .D(n325), .Z(n326) );
+  NAND2HD1X U380 ( .A(n328), .B(n298), .Z(n316) );
+  MUXI2HD1X U381 ( .A(n329), .B(n330), .S0(\rgb_counter[2] ), .Z(n328) );
+  AOI221HD1X U382 ( .A(\led_color[6] ), .B(n324), .C(\led_color[4] ), .D(n325), 
+        .E(n331), .Z(n330) );
+  INVHD1X U383 ( .A(n332), .Z(n331) );
+  AOI22HD1X U384 ( .A(\led_color[5] ), .B(n322), .C(\led_color[7] ), .D(n323), 
+        .Z(n332) );
+  AOI222HD1X U385 ( .A(\led_color[2] ), .B(n324), .C(\led_color[1] ), .D(n322), 
+        .E(\led_color[3] ), .F(n323), .Z(n329) );
+  OAI21HD1X U386 ( .A(n333), .B(n298), .C(n334), .Z(n313) );
+  AOI22B2HD1X U387 ( .C(\led_color[0] ), .D(n300), .AN(n310), .BN(n347), .Z(
+        n334) );
+  AND2HD1X U388 ( .A(n348), .B(n349), .Z(n310) );
+  MUXI2HD1X U389 ( .A(n335), .B(n336), .S0(\rgb_counter[2] ), .Z(n333) );
+  NAND2HD1X U390 ( .A(n337), .B(n338), .Z(n336) );
+  AOI22HD1X U391 ( .A(\led_color[13] ), .B(n322), .C(\led_color[15] ), .D(n323), .Z(n338) );
+  AOI22HD1X U392 ( .A(\led_color[14] ), .B(n324), .C(\led_color[12] ), .D(n325), .Z(n337) );
+  NAND2HD1X U393 ( .A(n339), .B(n340), .Z(n335) );
+  AOI22HD1X U394 ( .A(\led_color[9] ), .B(n322), .C(\led_color[11] ), .D(n323), 
+        .Z(n340) );
+  AND2HD1X U395 ( .A(\rgb_counter[0] ), .B(\rgb_counter[1] ), .Z(n323) );
+  AND2HD1X U396 ( .A(\rgb_counter[0] ), .B(n341), .Z(n322) );
+  AOI22HD1X U397 ( .A(\led_color[10] ), .B(n324), .C(\led_color[8] ), .D(n325), 
+        .Z(n339) );
+  NOR2HD1X U398 ( .A(\rgb_counter[0] ), .B(\rgb_counter[1] ), .Z(n325) );
+  NOR2HD1X U399 ( .A(n341), .B(\rgb_counter[0] ), .Z(n324) );
+  INVHD1X U400 ( .A(\rgb_counter[1] ), .Z(n341) );
+  INVHD1X U401 ( .A(n342), .Z(n311) );
+  AOI21HD1X U402 ( .A(n349), .B(n345), .C(n348), .Z(n342) );
+  INVHD1X U403 ( .A(n314), .Z(n309) );
+  NAND4HD1X U404 ( .A(n346), .B(n350), .C(n343), .D(n344), .Z(n314) );
+  NOR4HD1X U405 ( .A(\bit_counter[9] ), .B(\bit_counter[7] ), .C(
+        \bit_counter[6] ), .D(\bit_counter[5] ), .Z(n344) );
+  NOR2HD1X U406 ( .A(\bit_counter[4] ), .B(\bit_counter[11] ), .Z(n343) );
 endmodule
 

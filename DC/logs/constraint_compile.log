@@ -31,7 +31,7 @@ set SYS_CLK_PERIOD 83.3
 #****************************************************
 #****************************************************
 date
-Mon May  6 23:31:31 2024
+Tue May  7 10:47:13 2024
 #****************************************************
 set fix_hold_switch 	[getenv fix_hold_switch]
 false
@@ -47,7 +47,7 @@ set high_switch  	[getenv high_switch]
 true
 set remove_tie_dont_use_switch [getenv remove_tie_dont_use_switch]
 true
-# Define some variables for design -- {aes_ASIC}
+# Define some variables for design 
 #****************************************************
 set TOP_MODULE		ws2812
 ws2812
@@ -168,32 +168,29 @@ set_ideal_network [get_ports "$Rst_list"]
 #****************************************************
 # clock constraints
 #****************************************************
-set_clock_latency	0.8	[all_clocks]
+#set_clock_latency	0.8	[all_clocks]
+set_clock_uncertainty	0.1	[all_clocks]
 1
-set_clock_uncertainty	0.3	[all_clocks]
-1
-set_clock_transition    0.3     [all_clocks]
-1
+#set_clock_transition    0.3     [all_clocks]
 report_clocks -nosplit >  ${reportsDir}/${TOP_MODULE}.clocks.txt
 #****************************************************
 # drive and load, max_fanout,max_capacitance
 #****************************************************
-set MAX_LOAD	[load_of smic18_ss/NAND2HD2X/A]
-0.00954404
+#set MAX_LOAD	[load_of smic18_ss/NAND2HD2X/A]
+set MAX_LOAD [load_of smic18_ss/INVHD4X/A]
+0.0174056
 set_drive 0	[get_ports "$Rst_list"]
 1
 set_drive 0 	[get_ports "$Clk_list"]
 1
-set_driving_cell -lib_cell PLBI8S [remove_from_collection [all_inputs]          [get_ports [list clk reset]]]
+set_driving_cell -lib_cell INVHD2X [remove_from_collection [all_inputs]          [get_ports [list clk reset]]]
 1
-set_max_capacitance [expr $MAX_LOAD*12] [get_designs *]
+#set_max_capacitance [expr $MAX_LOAD*12] [get_designs *]
+#set_load [expr $MAX_LOAD*15] [all_outputs]
+set_load [expr $MAX_LOAD*3] [all_outputs]
 1
-set_load [expr $MAX_LOAD*15] [all_outputs]
-1
-set_max_fanout 10 [all_inputs]
-1
-set_max_transition 1.0 $TOP_MODULE
-1
+#set_max_fanout 10 [all_inputs]
+#set_max_transition 1.0 $TOP_MODULE
 #****************************************************
 # input delay and output delay
 # input delay and output delay were set to 50% clock period
@@ -209,14 +206,14 @@ set wb_in_ports [remove_from_collection [all_inputs]  [get_ports [list clk reset
 {rgb_data[23] rgb_data[22] rgb_data[21] rgb_data[20] rgb_data[19] rgb_data[18] rgb_data[17] rgb_data[16] rgb_data[15] rgb_data[14] rgb_data[13] rgb_data[12] rgb_data[11] rgb_data[10] rgb_data[9] rgb_data[8] rgb_data[7] rgb_data[6] rgb_data[5] rgb_data[4] rgb_data[3] rgb_data[2] rgb_data[1] rgb_data[0] led_num[7] led_num[6] led_num[5] led_num[4] led_num[3] led_num[2] led_num[1] led_num[0] write}
 set wb_out_ports [get_ports [list data]]
 {data}
-set_input_delay -max 5 -clock wb_clk $wb_in_ports
+#set_input_delay -max 5 -clock wb_clk $wb_in_ports
+#set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
+set_input_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_in_ports
 1
-set_input_delay -min 0.1 -clock wb_clk $wb_in_ports
+set_output_delay [expr $SYS_CLK_PERIOD /2] -clock wb_clk $wb_out_ports
 1
-set_output_delay -max 5 -clock wb_clk $wb_out_ports
-1
-set_output_delay -min -1 -clock wb_clk $wb_out_ports
-1
+#set_output_delay -max 5 -clock wb_clk $wb_out_ports
+#set_output_delay -min -1 -clock wb_clk $wb_out_ports
 #exit
 #****************************************************
 # false path
@@ -240,10 +237,7 @@ if { $power_switch == "true" } {
 #****************************************************
 # don't touch
 #****************************************************
-set_dont_touch        [get_cells U_* ]
-Warning: Can't find objects matching 'U_*' in design 'ws2812'. (UID-95)
-Error: Value for list 'object_list' must have 1 elements. (CMD-036)
-0
+#set_dont_touch        [get_cells U_* ]
 #****************************************************
 #  Map and Optimize the design
 #****************************************************
@@ -252,7 +246,7 @@ check_design
 ****************************************
 check_design summary:
 Version:     P-2019.03-SP3
-Date:        Mon May  6 23:31:33 2024
+Date:        Tue May  7 10:47:15 2024
 ****************************************
 
                    Name                                            Total
@@ -350,24 +344,21 @@ Information: Changed minimum wire load model for 'ws2812' from 'reference_area_1
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02   62483.2      0.00       0.0       9.4                          
-    0:00:02   62483.2      0.00       0.0       9.4                          
-    0:00:02   62483.2      0.00       0.0       9.4                          
-    0:00:02   62483.2      0.00       0.0       9.4                          
-    0:00:02   62483.2      0.00       0.0       9.4                          
-    0:00:02   21854.5      0.00       0.0       7.6                          
+    0:00:01   42258.7      0.00       0.0       0.0                          
+    0:00:01   42258.7      0.00       0.0       0.0                          
+    0:00:01   42258.7      0.00       0.0       0.0                          
+    0:00:01   42258.7      0.00       0.0       0.0                          
+    0:00:01   42258.7      0.00       0.0       0.0                          
+    0:00:02   21275.7      0.00       0.0       0.0                          
 Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
-    0:00:02   21854.5      0.00       0.0       7.6                          
-    0:00:02   21854.5      0.00       0.0       7.6                          
-    0:00:02   21854.5      0.00       0.0       7.6                          
-    0:00:02   21854.5      0.00       0.0       7.6                          
-    0:00:02   21924.4      0.00       0.0       2.2                          
-    0:00:02   21957.6      0.00       0.0       1.0                          
-    0:00:02   21944.3      0.00       0.0       0.7                          
-    0:00:02   21934.3      0.00       0.0       0.7                          
-    0:00:02   21934.3      0.00       0.0       0.7                          
-    0:00:02   21934.3      0.00       0.0       0.7                          
-    0:00:02   21934.3      0.00       0.0       0.7                          
+    0:00:02   21275.7      0.00       0.0       0.0                          
+    0:00:02   21275.7      0.00       0.0       0.0                          
+    0:00:02   21275.7      0.00       0.0       0.0                          
+    0:00:02   21275.7      0.00       0.0       0.0                          
+    0:00:02   21289.0      0.00       0.0       0.0                          
+    0:00:02   21289.0      0.00       0.0       0.0                          
+    0:00:02   21289.0      0.00       0.0       0.0                          
+    0:00:02   21289.0      0.00       0.0       0.0                          
 Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
 
 
@@ -379,21 +370,9 @@ Information: Changed minimum wire load model for 'ws2812' from 'reference_area_1
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02   21934.3      0.00       0.0       0.7                          
-    0:00:02   21934.3      0.00       0.0       0.7                          
-    0:00:02   21844.5      0.00       0.0       1.2                          
-Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
-
-
-  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
-  ----------------------------
-
-                                  TOTAL                                      
-   ELAPSED            WORST NEG   SETUP    DESIGN                            
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:00:02   21844.5      0.00       0.0       1.2                          
-    0:00:02   22363.5      0.00       0.0       0.0 rgb_counter[1]           
+    0:00:02   21289.0      0.00       0.0       0.0                          
+    0:00:02   21289.0      0.00       0.0       0.0                          
+    0:00:02   21249.1      0.00       0.0       0.0                          
 Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
 
 
@@ -404,25 +383,23 @@ Information: Changed minimum wire load model for 'ws2812' from 'reference_area_1
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:02   22363.5      0.00       0.0       0.0                          
-    0:00:02   22363.5      0.00       0.0       0.0                          
-    0:00:02   22017.5      0.00       0.0       0.0                          
-    0:00:02   21861.2      0.00       0.0       0.0                          
-    0:00:02   21791.3      0.00       0.0       0.0                          
-    0:00:02   21738.1      0.00       0.0       0.0                          
-    0:00:02   21738.1      0.00       0.0       0.0                          
-    0:00:02   21738.1      0.00       0.0       0.0                          
+    0:00:02   21249.1      0.00       0.0       0.0                          
+    0:00:02   21249.1      0.00       0.0       0.0                          
+    0:00:02   21122.7      0.00       0.0       0.0                          
+    0:00:02   21082.8      0.00       0.0       0.0                          
+    0:00:02   21069.5      0.00       0.0       0.0                          
+    0:00:02   21056.2      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
 Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
-    0:00:02   21738.1      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
-    0:00:02   21734.8      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
 Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
-Information: Changed minimum wire load model for 'ws2812' from 'reference_area_10000000' to 'reference_area_100000'. (OPT-171)
-    0:00:02   21734.8      0.00       0.0       0.0                          
+    0:00:02   21049.5      0.00       0.0       0.0                          
 Loading db file '/home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ff.db'
 Loading db file '/home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/IO/Synopsys/smic18IO_line_ff.db'
 Loading db file '/home/class/U65/SDUST_ASIC_proj/lib/SMIC18_Ver2.5/FEView_STDIO/STD/Synopsys/smic18_ss.db'
@@ -498,7 +475,7 @@ Warning: Design 'ws2812' contains 1 high-fanout nets. A fanout number of 60 will
 write_sdc  -nosplit ${netlistDir}/${TOP_MODULE}.sdc
 1
 date
-Mon May  6 23:31:37 2024
+Tue May  7 10:47:19 2024
 #****************************************************
 #  Finish and Quit
 #****************************************************
@@ -506,9 +483,9 @@ if {$exit_switch == "true"} {
 exit
 }
 
-Memory usage for main task 211 Mbytes.
-Memory usage for this session 211 Mbytes.
+Memory usage for main task 207 Mbytes.
+Memory usage for this session 207 Mbytes.
 CPU usage for this session 6 seconds ( 0.00 hours ).
-Elapsed time for this session 9 seconds ( 0.00 hours ).
+Elapsed time for this session 8 seconds ( 0.00 hours ).
 
 Thank you...

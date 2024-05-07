@@ -3,7 +3,7 @@
 Report : design
 Design : ws2812
 Version: P-2019.03-SP3
-Date   : Mon May  6 23:31:37 2024
+Date   : Tue May  7 10:47:18 2024
 ****************************************
 
 Design allows ideal nets on clock nets.
